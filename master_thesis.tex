@@ -20,11 +20,11 @@
 \setlength{\parskip}{0em}
 \setlength{\topsep}{0em}
 
-\usepackage{Mp} % Create a cover page
+\usepackage{title} % Create a cover page
 \title{KEK-PFにおける入射改善のための研究}
-\author{平野　広太}
+\author{平野  広太}
 \degree{修士（理学）}
-\advisor{島田　賢也}
+\advisor{島田  賢也}
 \majorfield{物理科学}\studentnumber{M170458}\yearandmonth{2019年 3月}
 
 \begin{document}
@@ -104,9 +104,9 @@ PFでは、キッカー電磁石の振幅の精度やタイミングの不揃い
 	\begin{center}
 	\begin{tabular}{ l  l c } \hline
 	$\bm{General parameters}$ & & \\ \hline
-	Energy & E[GeV] & 2.5　\\
+	Energy & E[GeV] & 2.5  \\
 	Dipole field & & \\
-	Circumference & L[m] & 187.4074　\\
+	Circumference & L[m] & 187.4074  \\
 	Natural emittance & $\varepsilon_0$ & 35.4 \\
 	Current & I[mA] & 450 \\
 	Revolution time & T[ns] & 624 \\
@@ -304,7 +304,7 @@ A_y &=& \bm{A} \cdot \bm{e}_y(s)
 を仮定する。この場合、式(\ref{Hamiltonin_2})は、時刻tを含まないので全エネルギーは不変量となる。$p_x$、$p_y$について2次の項まで考慮すると、
 \begin{eqnarray}
 \lefteqn{ H_3(x,p_x,y,p_y) } \nonumber \\
-&=& -eA_s-p(1+\frac{x}{ \rho})\left[1-(\frac{p_x}{p})^2-(\frac{p_y}{p})^2 \right]^{1/2}　 \nonumber \\
+&=& -eA_s-p(1+\frac{x}{ \rho})\left[1-(\frac{p_x}{p})^2-(\frac{p_y}{p})^2 \right]^{1/2}   \nonumber \\
 &\simeq& -eA_s - p(1+\frac{x}{ \rho}) + p(1+\frac{x}{ \rho})\left[\frac{1}{2}(\frac{p_x}{p})^2-\frac{1}{2}(\frac{p_y}{p})^2 \right]
 \end{eqnarray}
 となる。上記の独立変数sでのハミルトニアン方程式は、
@@ -398,7 +398,7 @@ w'' + K(s)w - 1/w^3 &=& 0 \\
 m_{11} &=& \sqrt{\frac{\beta_{s_2}}{\beta_{s_1}}}(cos\phi_{s_2s_1}+\alpha_{s_2}sin\phi_{s_2s_1} \\
 m_{12} &=& \sqrt{\beta_{s_2}\beta_{s_1}} sin\phi_{s_2s_1} \\
 m_{21} &=& \frac{\alpha_{s_2}-\alpha_{s_1}}{\sqrt{\beta_{s_2}\beta_{s_1}}} cos\phi_{s_2s_1} - \frac{1+\alpha_{s_2}\alpha_{s_1}}{\sqrt{\beta_{s_2}\beta_{s_1}}} sin\phi_{s_2s_1} \\
-m_{22} &=& \sqrt{\frac{\beta_{s_2}}{\beta_{s_1}}}(cos\phi_{s_2s_1}+\alpha_{s_2}sin\phi_{s_2s_1}) \\
+m_{22} &=& \sqrt{\frac{\beta_{s_2}}{\beta_{s_1}}}(cos\phi_{s_2s_1}+\alpha_{s_2}sin\phi_{s_2s_1} \\
 \phi_{s_2s_1} &=& \phi_{s_1}-\phi_{s_2}
 \end{eqnarray}
 で記述される。一周の転送行列は、
@@ -418,36 +418,25 @@ M_C =
 となる。ベータトロン振動の一般解は、
 \begin{eqnarray}
 \label{eq_betatron_oscillation}
-x(s) &=& \sqrt{\beta(s)J}cos\left(\int_0^s\frac{ds}{\beta(s)}+\varphi_0 \right) \\
-x'(s) &=& -\sqrt{ \frac{2J}{\beta(s)} } \left[ \alpha(s)cos(\varphi(s)+\varphi_0)+sin(\varphi(s)+\varphi_0) \right]
+x(s) &=& \sqrt{\beta(s)\varepsilon_0}cos\left(\int_0^s\frac{ds}{\beta(s)}+\varphi_0 \right) \\
+x'(s) &=& -\sqrt{ \frac{\varepsilon_0}{\beta(s)} } \left[ \alpha(s)cos(\varphi(s)+\varphi_0)+sin(\varphi(s)+\varphi_0) \right]
 \end{eqnarray}
-と書ける。ここで、$\varepsilon_0$と$\varphi_0$は初期条件により決定される定数である。J
-は次の不変量を表す。
-\begin{equation}
-J = \frac{1}{2\pi}\int_{torus}ds'ds = \frac{1}{2\pi}\oint s'ds
-\end{equation}
-ベータトロン関数$\beta(s)$は、加速器の磁場分布によって特徴づけられ振幅に関係する。
+と書ける。ここで、$\varepsilon_0$と$\varphi_0$は初期条件により決定される定数である。ベータトロン関数$\beta(s)$は、加速器の磁場分布によって特徴づけられ振幅に関係する。
 %*******************************************************************************
 \chapter{入射原理}
 蓄積リングを周回するビーム電流値は、ガス散乱や量子寿命、ビーム内散乱によって時間と共に減ってゆく\cite{Wrulich}。これを回復するため入射器から供給されるビームを、輸送路からリングへ注ぎ足す、入射が行われる。入射では輸送によるビームロスを最小に、入射効率を最大にすることが重要である。また、Liouvilleの定理よりリングの設計軌道をまわる粒子には重ならないように、リングのアクセプタンス内に入射しないといけない。この章では、入射原理とPFリングで採用しているキッカー入射について説明する。
 %*******************************************************************************
 \section{位相空間の軌跡}
-ベータトロン振動の式(\ref{eq_betatron_oscillation})から、
-\begin{equation}
-\beta x' + \alpha x = -\alpha \beta^{1/2}(s) sin(\nu \varphi(s) + \delta)
-\end{equation}
-の関係が得られる。不変量を次の式でまとめ、
+ベータトロン振動の式(\ref{eq_betatron_oscillation})から次の不変量が求められる。
 \begin{equation}
 \gamma x^2 + 2\alpha xx' + \beta x'^2 = Cst
 \end{equation}
-上式をクーランシュナイダー不変量(Courant-Synder invariant)と呼ぶ\cite{Courant_inv}。この式は、円形加速器において運動する粒子は位相空間上で楕円上を周回することとTwissパラメータの作用を示している(図\ref{Phase_space})。また、次の式で規格化される。
+これをクーランシュナイダー不変量(Courant-Synder invariant)と呼ぶ\cite{Courant_inv}。この式は、円形加速器において運動する粒子は位相空間上で楕円上を周回することを示している(図\ref{Phase_space})。また、次の式で規格化される。
 
 \begin{eqnarray}
 X &=& \frac{x}{\sqrt{\beta}} \\
 P &=& \frac{\alpha x + \beta x'}{ \sqrt{\beta}}
 \end{eqnarray}
-
-以下の図\ref{Phase_space}に、クーランシュナイダー不変量から決まる位相空間における軌跡とある粒子が1周期後にどこに来るのか示した写像を示す。左図の楕円のプロットで振幅の最大値はベータトロン振動に相当し、角度の最大値はJの作用に相当する意味を持つ。
 
 	\begin{figure}[H]
 		\begin{center}
@@ -532,13 +521,13 @@ A_{inj}^2 = X_0^2 + P_0^2
 	\end{figure}
 
 \begin{itemize}
-\item　蹴り角
+\item  蹴り角
 
 蹴り角の誤差の原因として渦電流の効果や制御系の誤差、非線形の蹴り角などが考えられる。制御系の誤差は蹴り角の制御に使われる線形性がリングに設置されることで変わる特性を指す。
-\item　反射
+\item  反射
 
 目標のパルス波形は半正弦波で設計されているが、実際の波形ではZero-to-Zero以降の時間でも蹴り角が考えられる。
-\item　時間
+\item  時間
 
 リングの周回時間の2倍よりパルス幅が長いと入射ビームをマルチターンにわたってキックが生じる。また、キッカーにパルス幅が異なる電磁石が含まれている場合、蹴り角やタイミングの調整でバンプを閉じることは原理的にできない。
 \end{itemize}
@@ -689,7 +678,7 @@ x'_n
 
 つまりパルス電磁石の蹴り角は、1ターン目は
 \begin{equation}
-x'_1 = \frac{1}{\sqrt{\beta_{Kicker}\beta_{Bpm}}sin\phi　} x_1
+x'_1 = \frac{1}{\sqrt{\beta_{Kicker}\beta_{Bpm}}sin\phi  } x_1
 \end{equation}
 で求められて、これを原点に2ターン目以降は、
 \begin{equation}
@@ -1319,10 +1308,10 @@ S=\sqrt{\sum_{t=-312}^{312} \sum_{i}^{BPM}Dx^2}
 \newpage
 \section{ビームスタディ}
 \begin{itemize}
-\item　プログラムのデバッグ
+\item  プログラムのデバッグ
 
 各モジュールの動作確認とcaputの有効化。BPMの応答確認。
-\item　K3,K4のDelay timeを変えて目標値のスキャン
+\item  K3,K4のDelay timeを変えて目標値のスキャン
 
 前回の測定では、K3、K4のディレイを変えてバンプハイトが成長し(15 mm~17 mm)ビームが削れたと考えている。K1の蹴り角を低くして測定を取り直す。ディレイを以下の通りに変更、中心値となるはず。
 
@@ -1347,7 +1336,7 @@ S=\sqrt{\sum_{t=-312}^{312} \sum_{i}^{BPM}Dx^2}
 		\caption{K3,K4のDelay timeを変えたときの目標値}
 	\end{figure}
 
-\item　勾配を使ってパラメータの更新
+\item  勾配を使ってパラメータの更新
 
 振幅を小さくするため、最急降下法(ディレイのみを変更)を試す。前回のマッピングから経路をとって更新の様子を見るのが目標。以下の手順で調べる。１．勾配がとれるのか。K4を+-40して傾きのベクトルをみる。2．勾配の大きさから学習係数を調べる。3.ラインサーチの繰り返しがどこまで有効か?。４．誤差の処理について
 
@@ -1372,7 +1361,7 @@ S=\sqrt{\sum_{t=-312}^{312} \sum_{i}^{BPM}Dx^2}
 	\end{figure}
 
 
-\item　K3,K4の蹴り角を変えて目標値のスキャン
+\item  K3,K4の蹴り角を変えて目標値のスキャン
 
 前回の測定からK3、K4の蹴り角の変化量が足りていないとわかった。それは実際に以下の計算結果とスタディ報告の内容通り。
 
