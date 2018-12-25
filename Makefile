@@ -1,4 +1,4 @@
-FILE=Mp
+FILE=MP
 
 CNT := 2
 
