@@ -8,12 +8,8 @@ texlive2014
 
 ## Requirement
 
-platex  
-dvipdfmx  
-
-## Usage
-
-This project provide the text of the master thesis from Hiroshima Universiity.  
+platex(compiler)  
+dvipdfmx(transform pdf from dvi)
 
 # vim cover.sty  
 
