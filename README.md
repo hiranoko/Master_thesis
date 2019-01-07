@@ -1,6 +1,6 @@
 # Master_thesis
 
-master_thesis at 20181213  
+master_thesis at Date  
 
 ## Install
 
@@ -10,11 +10,6 @@ texlive2014
 
 platex(compiler)  
 dvipdfmx(transform pdf from dvi)
-
-# vim cover.sty  
-
-Create cover page.  
-This file is original by Tsukuba University.  
 
 # vim Mp.tex
 
