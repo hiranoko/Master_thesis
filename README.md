@@ -4,7 +4,8 @@ master_thesis at Date
 
 ## Install
 
-texlive2014  
+apt-get install texlive2014
+apt-get install texlive-science
 
 ## Requirement
 
