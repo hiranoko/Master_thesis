@@ -1,4 +1,4 @@
-﻿\documentclass[a4paper,10pt]{jreport}
+﻿\documentclass[a4paper,10.5pt]{jreport}
 
 \usepackage{times} % use Times Font instead of Computer Modern
 \usepackage[dvipdfmx]{graphicx} %  use figure package
@@ -31,7 +31,7 @@
 {\LARGE 物理科学専攻\par}\vspace{0.3cm} % Faculty name
 {\LARGE 放射光物理研究室\par}\vspace{1.0cm} % Faculty name
 {\LARGE 指導教員  島田賢也\par}\vspace{1.0cm} % Supervisor name
-{\LARGE 2018年12月27日} % Data 
+{\LARGE 2019年1月8日} % Data 
 \end{center}
 \end{titlepage}
 \thispagestyle{empty}
@@ -103,9 +103,9 @@ KEK電子・陽電子入射器(LINAC)は全長600 mの線形加速器である\c
 \section{本論文の構成}
 ここで、本論文の構成を説明する。
 
-第2章で、ビーム力学の理論を紹介する。はじめに加速器電磁石の多極展開を説明して、Hill's equationからベータトロン振動の導出について説明をする。
+第2章で、ビーム力学の理論を紹介する。はじめに加速器電磁石の多極展開を説明して、Hill's equationからベータトロン振動の導出について説明をする。その後、ベータトロン振動を位相空間上にプロットして軌跡を調べる方法を説明する。
 
-第3章で、入射原理について説明する。はじめにベータトロン振動を位相空間上にプロットして軌跡を考える方法を与え、キッカー入射について説明する。その後、キッカー入射に含まれる誤差、パルス幅の影響によるマルチターンキック、トレランスを増やすため用いられるキッカージャンプ入射について説明する。
+第3章で、入射方式について説明する。はじめにキッカー入射について説明する。つぎに、キッカー入射に含まれる誤差、パルス幅の影響を考慮するためのマルチターンキック、入射効率の許容量を増やすためのキッカージャンプ入射について説明する。さいごにシンクロトロン入射について説明し、横方向の振動を縦方向にまわし入射振幅の許容量を増やすことについて説明する。
 
 第4章で、入射パラメータの測定方法と測定結果について報告する。ここで入射パラメータは入射点のビーム位置関係とキッカー、セプタム電磁石の特性である。
 
@@ -261,7 +261,7 @@ B_n &=& -\frac{1}{n!} \left( \frac{\partial^{n-1}}{\partial r^{n-1}}B\theta \rig
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/beam_dynamics/orthogonal_curvilinear.png}
+        \includegraphics[width=110mm]{./figure/beam_dynamics/orthogonal_curvilinear.png}
         \caption{直交曲線座標系}
         \label{Coordinate}
     \end{figure}
@@ -468,20 +468,20 @@ X &=& \frac{x}{\sqrt{\beta}} \\
 P &=& \frac{\alpha x + \beta x'}{ \sqrt{\beta}}
 \end{eqnarray}
 
-以下の図\ref{Phase_space}に、クーランシュナイダー不変量から決まる位相空間における軌跡と粒子が1周期後にどこに来るのか示した写像を示す。左図の楕円のプロットで振幅の最大値はベータトロン振動に相当し、角度の最大値はJの作用に相当する。
+以下の図\ref{Phase_space}に、クーランシュナイダー不変量から決まる位相空間における軌跡と粒子が1周期後にどこに来るのか示した写像、ポアンカレプロットを示す。左図の楕円のプロットで振幅の最大値はベータトロン振動に相当し、角度の最大値はJの作用に相当する。
 
     \begin{figure}[H]
         \centering
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=0.7\columnwidth]{./figure/formula_injection/Phase_space.png}
+        \includegraphics[clip, width=0.8\columnwidth]{./figure/formula_injection/Phase_space.png}
         \hspace{16mm} [1]Phase Space
         \end{minipage}
         % 2
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=0.7\columnwidth]{./figure/formula_injection/Normalized_phase_space.png}
+        \includegraphics[clip, width=0.8\columnwidth]{./figure/formula_injection/Normalized_phase_space.png}
         \hspace{16mm} [2]Normalized Phase Space
         \end{minipage}
         \end{tabular}
@@ -548,7 +548,7 @@ A_{inj}^2 = X_0^2 + P_0^2
 \begin{itemize}
 \item  蹴り角
 
-設定値から振幅や励磁タイミングに含まれる誤差の原因として制御系の誤差が考えられる。蹴り角の制御はリング設置前に磁場測定を行い、線形性を調べて用いる。これは実験室測定によって決定したパラメータである。しかしビームベースアライメントには十分な精度とならない場合がある\cite{nsls}。またパルスの立ち上がり時間や立ち下がり時間、波形の不揃いによるミスマッチや渦電流、振幅のZero-to-Zero以降に含まれるアンダーシュートなどが蹴り角の誤差に含まれる。ここでミスマッチは設定値の蹴り角の比率からずれた値を表す。
+設定値から振幅や励磁タイミングに含まれる誤差の原因として制御系の誤差が考えられる。蹴り角の制御はリング設置前に磁場測定を行い、線形性を調べて用いる。これは実験室測定によって決定したパラメータである。しかしビームベースアライメントには十分な精度とならない場合がある\cite{injection_nsls}。またパルスの立ち上がり時間や立ち下がり時間、波形の不揃いによるミスマッチや渦電流、振幅のZero-to-Zero以降に含まれるアンダーシュートなどが蹴り角の誤差に含まれる。ここでミスマッチは設定値の蹴り角の比率からずれた値を表す。
 
 \item  時間
 
@@ -589,7 +589,7 @@ A_{inj}^2 = X_0^2 + P_0^2
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/formula_injection/phase_stability.png}
+        \includegraphics[width=120mm]{./figure/formula_injection/phase_stability.png}
         \caption{位相空間安定性}
         \label{phase_stability}
     \end{figure}
@@ -601,7 +601,7 @@ A_{inj}^2 = X_0^2 + P_0^2
      \begin{figure}[H]
         \centering
         \includegraphics[width=120mm]{./figure/formula_injection/separatrix.png}
-        \caption{セパラトリクス}
+        \caption{セパラトリクス($\phi=\pi/2$)}
         \label{separatrix}
     \end{figure}
 
@@ -620,7 +620,7 @@ PFリングではキッカー入射にエネルギー偏差を加えた入射を
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/formula_injection/separatrix_KEK.png}
+        \includegraphics[width=120mm]{./figure/formula_injection/separatrix_KEK.png}
         \caption{シンクロトロン入射の入射ビームの軌跡}
         \label{inj_syn_pf}
     \end{figure}
@@ -629,22 +629,23 @@ PFリングではキッカー入射にエネルギー偏差を加えた入射を
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/formula_injection/separatrix_KEK2.png}
+        \includegraphics[width=120mm]{./figure/formula_injection/separatrix_KEK2.png}
         \caption{シンクロトロン入射のクーランシュナイダー不変量}
         \label{inj_syn_courant_pf}
     \end{figure}
 
-図\ref{inj_syn_courant_pf}の最初の振幅は入射点から下流のキッカー電磁石2台で蹴られ振幅を小さくした後、分散のある部分でベータトロン振動の振動周りで偏差を加えていることがわかる。この偏差が交換された量に相当する。
+図\ref{inj_syn_courant_pf}の最初の振幅は入射点から下流のキッカー電磁石2台で小さくされた後、分散のある部分でベータトロン振動の周りに偏差を加えていることがわかる。この偏差が分散の振動成分である。入射点 (Length=0 m)での、Betatronの振動成分を取り出した値と元の値の差分が、交換された量に相当する。
+
 
 %*******************************************************************************
 \chapter{入射パラメータの測定}
-本章ではビームベースで入射パラメータの測定を記述する。入射点でのビームの位置関係とキッカーのパルス波形、セプタムの励磁特性など入射に関するパラメータを調べた\cite{beam_based_meas}\cite{beam_based_meas2}。はじめに測定方法について説明し、測定原理、測定結果を解説する。
+本章では、入射パラメータの測定に関する内容を記述する。ここで入射パラメータは入射点でのビームの位置関係とキッカーのパルス波形、セプタムの励磁特性などを指す。はじめに測定方法について説明する、その後、測定結果について記述する\cite{beam_based_meas}\cite{beam_based_meas2}。
 \section{測定方法}
 入射パラメータの測定はビームベースで行う。ビームベース測定は、直線部 (ID02)両端のダクトの電極に検出回路 (Libera Brilliance+\cite{Libera})を接続してドリフトスペースを挟んだ2点の位置情報から、直線部中心の位相空間情報を計算し、上流に転送する方法で行った。この測定で入射ビームの位相空間情報及びキッカー電磁石のパルス波形、セプタム電磁石・ビーム輸送路の補正電磁石の応答など入射パラメータを調べる。直線部からキッカー電磁石及び入射点を含めたリングの構造をFig. \ref{Lattice_meas}に示す。また、転送の計算で用いたTwissパラメータと直線部からの位相進みを表\ref{Twiss_ID02}にまとめる。
 
      \begin{figure}[htbp]
         \centering
-        \includegraphics[width=90mm]{./figure/meas_inj/Lattice_meas.png}
+        \includegraphics[width=100mm]{./figure/meas_inj/Lattice_meas.png}
         \caption{ビームベース測定の構成}
         \label{Lattice_meas}
     \end{figure}
@@ -653,11 +654,11 @@ PFリングではキッカー入射にエネルギー偏差を加えた入射を
     \caption{Twissパラメータと位相進み}
     \label{Twiss_ID02}
     \centering
-    \begin{tabular}{ c r c c c c c c } \hline
-    Twiss parameter & Unit & K1 & K2 & K3 & K4 & ID02 & Inj \\ \hline
-    $\alpha_x$       & rad & -1.79 & -0.62 & -1.47 & -0.66 & 0.01 & -1.08 \\ 
-    $\beta_x$        & \si{m} & 3.25 & 6.02 & 13.8 & 3.15 & 12.0 & 9.45 \\ 
-    $\Delta \phi_x$ &  & 8.01 & 8.29 & 1.24 & 0.86 & 0.00 & 1.26 \\ \hline
+    \begin{tabular}{ c c c c c c c } \hline
+    Twiss parameter & K1 & K2 & K3 & K4 & ID02 & Inj \\ \hline
+    $\alpha_x [rad]$ & -1.79 & -0.62 & -1.47 & -0.66 & 0.01 & -1.08 \\ 
+    $\beta_x [\si{m}]$ & 3.25 & 6.02 & 13.8 & 3.15 & 12.0 & 9.45 \\ 
+    $\Delta \phi_x$ & 8.01 & 8.29 & 1.24 & 0.86 & 0.00 & 1.26 \\ \hline
     \end{tabular}
     \end{table}
 
@@ -820,6 +821,7 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
     \begin{table}[H]
     \caption{直線部2番での蓄積ビームの位相空間情報}
     \label{PS_stored_ID02}
+    \centering
     \begin{tabular}{ l c c } \hline
     & Position [mm] & Angle [mrad] \\ \hline
     Horizontal & $-1.83\pm0.28$ & $0.52\pm0.09$ \\ 
@@ -847,19 +849,20 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
     \end{tabular}
     \end{table}
 
-以上の結果を考察する。表\ref{PS_inj_ID02}は表\ref{PS_stored_ID02}の結果と図\ref{PS_inj_pt}のプロットを用いて相対座標になおされたものである。つまり表\ref{PS_stored_ID02}の結果を入射点まで転送して基準軌道の座標とし、図\ref{PS_inj_pt}の結果にオフセットをとる操作がされている。図\ref{PS_inj_pt}のプロットで、削れた入射ビームは測定されていない(ビームの重心位置は変わっていない)と考える。このとき水平位置分布の最小値はセプタム外壁と入射ビームまでの距離の目安を与える。ここで入射ビームの位置を固定して、水平位置分布の最小値をバンプハイトとセプタム壁までの距離2 \si{mm}とセプタム壁の厚み5 \si{mm}を引いてバンプハイトを求める。このときバンプハイトは約17.5 \si{mm}と求まる。これは蓄積ビームの位置とセプタム内壁までの位置を求めた測量結果とビーム測定から求めたバンプハイトの19 \si{mm}に整合性をもつ。ここまでの考察は、セプタム電磁石の上流に設置されているアブソーバーの位置は測量によって15 \si{mm}であることがわかったこと、真空槽の外枠の位置と真空槽の窓から測量できる結果でセプタム電磁石を位置を推定したこと、当時のキッカーの蹴り角は正しいとしてバンプを形成しセプタム内壁までの距離は21 \si{mm}と考えた、以上の順序で求めた図\ref{CS_inj}はビームベース測定の入射ビームの分布から推定しても矛盾しないことを確かめるために行った。
+以上の結果を考察する。表\ref{PS_inj_ID02}は表\ref{PS_stored_ID02}の結果と図\ref{PS_inj_pt}のプロットを用いて相対座標になおされた。つまり表\ref{PS_stored_ID02}の結果を入射点まで転送して基準軌道の座標とし、図\ref{PS_inj_pt}の結果にオフセットを加えている。ここで図\ref{PS_inj_pt}のプロットに削れた入射ビームは測定されていない(ビームの重心位置は変わっていない)と考える。このとき水平位置分布の最小値はセプタム外壁と入射ビームまでの距離の目安を与える。入射ビームの位置を固定して、水平位置分布の最小値からバンプハイトとセプタム壁までの距離2 \si{mm}とセプタム壁の厚み5 \si{mm}を引いてバンプハイトを求める。このときバンプハイトは約17.5 \si{mm}と求まる。これは蓄積ビームの位置とセプタム内壁までの位置を測量した結果の19 \si{mm}に近い値をもつ。
+
+図\ref{CS_inj}は以下の順序で調べている。セプタム電磁石の上流に設置されているアブソーバーの位置は測量によって15 \si{mm}であることがわかったこと、真空槽の外枠の位置と真空槽の窓から測量できる結果でセプタム電磁石を位置を推定したこと、当時のキッカーの蹴り角は正しいとしてバンプを形成し、バンプハイトを上げてビームが削れた蹴り角からセプタム内壁までの距離は21 \si{mm}であると調べた。これはビームベース測定の入射ビームの分布から推定しても矛盾しないことを上記の考察でも確かめた。
 
 表\ref{PS_inj_ID02}の水平の位相空間座標は、設計モデルの (27 \si{mm}, 2 \si{mrad})から初期振幅の増大が確認できる。
 
-     \begin{figure}[H]
-        \centering
-        \includegraphics[width=100mm]{./figure/meas_inj/PS_inj.png}
-        \caption{入射ビームの位相空間情報}
-        \label{PS_inj}
-    \end{figure}
+%     \begin{figure}[H]
+%        \centering
+%        \includegraphics[width=100mm]{./figure/meas_inj/PS_inj.png}
+%        \caption{入射ビームの位相空間情報}
+%        \label{PS_inj}
+%    \end{figure}
 
 %*******************************************************************************
-\newpage
 \subsection{キッカー電磁石}
 キッカー電磁石のパルス波形の測定は、4台のパルス電磁石を独立に0.4 mradの蹴り角を設定し蓄積ビームの応答を測定した。ビームの応答はパルス波形に再構築するため、励磁のタイミングを遅延時間方向に25 nsec刻みで掃引して0~2500 nsecまでのパルス波形をプロットした(図\ref{PS_KK_re})。
 
@@ -870,18 +873,19 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
         \label{PS_KK_re}
     \end{figure}
 
-    \begin{table}[H]
-    \caption{キッカーの蹴り角とパルス幅(Zero-to-Zero)}
-    \label{Parameter_KK}
-    \centering
-    \begin{tabular}{ l c c c c } \hline
-    & K1 & K2 & K3 & K4 \\ \hline
-    Kick Angle [mrad]   & -0.414 & 0.351 & -0.452 & -0.539 \\ 
-    Pulse length [nsec] & 1550 & 1625 & 1550 & 1625 \\ \hline
-    \end{tabular}
-    \end{table}
+% 値が見方によって変わるからomit
+%    \begin{table}[H]
+%    \caption{キッカーの蹴り角とパルス幅(Zero-to-Zero)}
+%    \label{Parameter_KK}
+%    \centering
+%    \begin{tabular}{ l c c c c } \hline
+%    & K1 & K2 & K3 & K4 \\ \hline
+%    Kick Angle [mrad]   & -0.414 & 0.351 & -0.452 & -0.539 \\ 
+%    Pulse length [nsec] & 1550 & 1625 & 1550 & 1625 \\ \hline
+%    \end{tabular}
+%    \end{table}
 
-パルス波形より蹴り角を揃え、タイミングを実際のビームの挙動から整列することができた。K1のパルス波形はID02からの位相進みが振幅の節となるため、ID01の位相空間情報を転送して求めたが位相進みは0.405であるためばらつきが観測された。次に、実際にリングからキッカー電磁石K3を取り出して磁場測定したパルス波形と比較を行った(図\ref{Com_KK})。
+図\ref{PS_KK_re}よりパルス波形より蹴り角を揃え、タイミングを実際のビームの挙動から整列することができた。また、パルス幅 (Zero-to-Zero)がキッカーによって異なるため原理的にキッカーバンプマッチングを取れないことが確認できる。K1の測定結果はID02からの位相進みが振幅の節となるため、ID01から転送した結果を採用した。さらに精度の良い結果を得るためには、位相進みが振動の腹となる直線部で測定する必要がある。次に、実際にリングからキッカー電磁石K3を取り出して磁場測定したパルス波形と比較を行った(図\ref{Com_KK})。
 
      \begin{figure}[H]
         \centering
@@ -890,11 +894,13 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
         \label{Com_KK}
     \end{figure}
 
-図\ref{Com_KK}では立ち上がりから150電磁石0 nsecまでパルス波形は一致しており、蹴り角とタイミングの調整が保証されるが、設定振幅の蹴り角から反対方向にはみ出すアンダーシュートで違いが出た。ビームベース測定でタイミングや蹴り角を揃えることは制御室から電磁石までの環境に依存せず調整を行うことができるため、電流値-磁場の係数を正しく反映することができ、計算通りのバンプを設計できる。しかし、タイミングを完璧に同期したとしても、アンダーシュートの影響やパルス幅の違いによって完全に閉じたバンプ波形を設計できないことがわかる。
+% 磁場測定との違いの理由は後ろの制御室から電磁石までの環境の違いという事でいいんでしょうか？後はここで何を言いたいんでしょうか？磁場測定との比較の目的をちょっと書いといてもらわないと、なんでこれやったんだろうと疑問に思います。今までは磁場測定で合わせてたのでイマイチだったみたいな話があるんでしょうか?アンダーシュートの磁場測定とビーム測定の違いは最後の「完全に閉じたバンプ波形を設計できないことが分かる」まで係ってるんでしょうか？係ってないなら違いが出たの後に理由とイマイチだった見たいな話を書いて段落変えといたほうがいいですね。結論まで読んで出てきたんですがもしかしてこれって反射のこうかですか？
+
+図\ref{Com_KK}では立ち上がりから1500 nsecまでパルス波形は一致しているが、設定振幅の蹴り角が反対方向にはみ出すアンダーシュート以降で違うことがわかる。この違いは磁場測定による結果だけではみられない、リングから制御系までの環境を含んだ効果を表す。このビームベース測定結果を用いてキッカーバンプの計算を次章で行う。
+
 %*******************************************************************************
-\newpage
 \subsection{セプタム電磁石}
-はじめにセプタム電磁石の制御で使われる電流値の線形性を測定した。これはオシロスコープで観測される電流波形のピーク値と制御系から返される値の関係性である。電流値は0 Aから表\ref{coef_Septum}の最大値まで変化させてモニターの蹴り角を調べた。結果にはオシロスコープのピークサーチの分解能によるばらつきを含むが、最小二乗法による回帰分析の結果は性能の最大値まで線形性をもつことを確認した(図\ref{pre_septum})。
+はじめにセプタム電磁石の制御で使われる電流値の線形性を測定した。これはオシロスコープで観測される電流波形のピーク値と制御系からリードバックされる値の関係性を示す。電流値は0 \si{A}から設計の最大値まで変化させてモニターの蹴り角を調べた。結果はオシロスコープのピークサーチの分解能によるばらつきを考慮すると、最小二乗法による回帰分析の結果から性能の最大値まで線形性をもつことを確認した(図\ref{pre_septum})。
 
     \begin{figure}[H]
         \centering
@@ -914,8 +920,7 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
         \label{pre_septum}
     \end{figure}
 
-次に図\ref{pre_septum}で測定された傾きの大きさがビームベースの結果と一致するか確認するため、セプタムの蹴り角を変化させたときのビームの傾きを測定した。モニターの蹴り角とビームベース測定から予測される蹴り角を比較は、直線部2番で測定される位相空間を入射点まで転送した値で行う。セプタム電磁石の有効磁場長内で変化する位置は小さいとすると、セプタムで蹴られたビームはドリフト空間の転送の転送を通して観測される。測定はセプタム電磁石上流にある補正電磁石で入射ビームが直線部のダクト中心を通るよう調整した後、モニターで$\pm$0.3 mrad変化させたときの傾きをビームベース測定で調べた(図\ref{septum})。オシロスコープのピークサーチから返される電流値の値は、ビームがダクト内で変化して返される蹴り角の変化量をみる分解能を持たないので、図\ref{pre_septum}の結果を用いた。
-
+次に図\ref{pre_septum}で測定された傾きの大きさがビームベースの結果と一致するか確認する。測定はセプタムの蹴り角を変化させたときのビームの傾きを調べた。モニターの設定値とビームベース測定の結果との比較は入射ビームの測定方法と同様である。セプタム電磁石の有効磁場長内で変化する位置は小さいと無視すると、セプタムで蹴られたビームはドリフト空間の転送の効果だけを経て、蹴られた角度がそのまま観測される。測定はセプタム電磁石上流にある補正電磁石で入射ビームが直線部のダクト中心を通るよう調整した後、モニターでセット値から$\pm$0.3 mrad変化させたときの傾きを調べた、結果を図\ref{septum}に示す。オシロスコープのピークサーチから返される電流値の値は図\ref{pre_septum}の結果を用いてモニターの電流値からセット値を推定した。
 
     \begin{figure}[htbp]
         \centering
@@ -935,6 +940,8 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
         \label{septum}
     \end{figure}
 
+セプタムの蹴り角を0.3 \si{mrad}変えると直線部を通るビームはダクトの端近くを通るため非線形効果が大きくなる、そのため測定条件を固定して変化量は大きくできなかった。補正電磁石の測定も実施したが同様の理由で測定精度が得られていない。以上の操作から得た、電流値-磁場の係数を表\ref{Parameters_Septum2}にまとめる。
+
     \begin{table}[H]
     \caption{セプタム電磁石の励磁係数}
     \label{Parameters_Septum2}
@@ -947,7 +954,7 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
     \end{tabular}
     \end{table}
 
-これらの操作から得た電流値-磁場の係数を表\ref{Parameters_Septum2}にまとめる。表\ref{Parameters_Septum2}より、以前の測定から実際のビームはS2で大きく蹴っていることが予測される。
+表\ref{Parameters_Septum2}からS1とS2どちらも磁場が飽和することなくビームを蹴っていることがわかる。BTの電磁石を調整するためには入射ビームのベータトロン振動を小さくするオンライン調整が必要となる。
 
 %*******************************************************************************
 \chapter{入射条件の計算}
@@ -1470,7 +1477,7 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn=800} \sum
 
 マルチターンキックの数を増やすとバンプを閉じる等に計算した結果をそのまま使うことはできない。そのためマッチングがずれた時の振動の大きさを目標関数にして、バケット全体で評価した値を導入した。マルチターンキックの数を増やして実際のビームの応答に合っているのかを確認する必要がある。入射振動の抑制は入射ビームの調整を、水平方向の位置では入射ビームのばらつきを考慮しセプタム位置に近づけて、角度は正規化位相空間で原点をとるようにし、垂直方向の位相空間情報を原点にとり達成される。入射効率の計算では、入射パラメータの測定で得られた入射ビームの位相空間情報とマルチターンキックを導入してキッカージャンプによる効率改善の効果を調べた。
 
-\subsection*{入射条件の探索}
+\subsection*{入射調整}
 入射条件の探索では、はじめに入射条件の計算で導入したキッカーバンプマッチングを評価した目標値とビームスタディの結果を比較して目標関数の正当性を評価した。次に入射効率の計算を拡張した。最後にキッカーバンプマッチングの調整を実施した。
 
 目標関数の評価では、実際のビームに含まれる非線形効果による違いを持つが一致していることを確認した。この評価によって、マルチターンキックの主要な部分はシミュレーションに反映できたとわかる。入射効率の計算では、測定したオプティックス、位相空間情報、マルチターンキックなど全ての結果を導入して再計算を行った。その結果、入射ビームの耐性が落ちた状況でも入射できたのはマルチターンキックによる効果だとわかった。しかし入射調整をしてキッカージャンプを含めても、効率は7割までしか改善できないことがわかった。キッカーバンプマッチングの調整では、PFリングのキッカー電磁石で調整可能なディレイタイムと蹴り角を調整してマッチングを行った。これは最急降下法を用いて目標関数を最小化することに相当する。調整の結果、蓄積ビームの振幅を全てのバケットで小さくする解を見つけた。
@@ -1889,7 +1896,7 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
 \appendix
 \addcontentsline{toc}{chapter}{付録  最適化法}
 \chapter*{最適化法}
-本付録では、入射シミュレーションの計算条件に用いるために測定したベータトロン関数の内容について述べる。ベータトロンの測定ではLOCOを実施した\cite{LOCO}。ベータトロンの測定について理解する上でOHOセミナーの資料\cite{Kobayashi_oho}を主に参照した。
+
 \section*{測定原理}
 
 %*******************************************************************************
@@ -1903,7 +1910,8 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
 \renewcommand{\bibname}{参考文献}
 \begin{thebibliography}{99}
 
-%Introduction
+% Chapter 1
+% Introduction
 \bibitem{Courant}
 E. D. Courant and H. S. Snyder.
 \newblock ``THEORY OF THE ALTERNATING-GRADIENT SYNCHROTRON",
@@ -1929,26 +1937,34 @@ Y. Kobayashi, A. Ueda, and T. Mitsuhashi,
 \newblock ``INJECTION PERFORMANCE WITH A TRAVELING WAVE KICKER MAGNET SYSTEM AT THE PHOTON FACTORY STORAGE RING",
 \newblock Proc PAC’03, paper RPPG013, pp. 3204-3206.
 
+% Chapter 2
 % Beam Dynamics & Injection Scheme
 \bibitem{Hochi}
 發知英明, 
 \newblock ``大強度陽子リングのビーム力学",
 \newblock 高エネルギー加速器セミナーOHO, 2010.
 
-\bibitem{Kobayashi_oho}
-小林幸則,
-\newblock ``電子ストレージリング",
-\newblock 高エネルギー加速器セミナーOHO, 1993.
+\bibitem{Courant_inv}
+E. Courant, M.S. Livingston, H. Snyder,
+\newblock ``THE STRONG-FOCUSING SYNCHROTON-A NEW HIGH ENERGY ACCELERATOR",
+\newblock Phys. Rev. 88, pp. 1190, 1952
 
-\bibitem{Kuboki}
-久保木浩功,
-\newblock ``陽子ビームモニター",
-\newblock 高エネルギー加速器セミナーOHO, 2018.
-
+% Chapter 3
+% Injection Scheme
 \bibitem{Wrulich}
 A. Wrulich,
 \newblock ``SINGLE BEAM LIFETIME,",
 \newblock CERN-94-01, pp. 409, 1994
+
+\bibitem{kicker_inj}
+Gottfried Mülhaupt,
+\newblock ``SYNCHROTRON RADIATION SOURCES A PRIMER, ",
+\newblock World Scientific, Singapore, Chapter 3, 1994.
+
+\bibitem{injection_nsls}
+G.M. Wang, W.X. Cheng, X. Yang, J. Choi, T.shaftann,
+\newblock ``STORAGE RING INJECTION KICKERS ALIGNMENT OPTIMIZATION IN NSLS-2",
+\newblock Proceedings of IPAC2017, Copenhagen, Denmark, pp. 4683-4685, THPVA095
 
 \bibitem{kicker_jump}
 M. Tobiyama, E. Kikutani, J. W. Flanagan and S. Hiramatsu, 
@@ -1960,27 +1976,8 @@ A. Saa Hernandez and M. Aiba
 \newblock ``Investigation of the injection scheme for SLS 2.0",
 \newblock Proceedings of the 2015 Particle Accelerator Conference, Richmond, USA, paper TUPJE046, pp. 1720-1723, 2015.
 
-\bibitem{Courant_inv}
-E. Courant, M.S. Livingston, H. Snyder,
-\newblock ``THE STRONG-FOCUSING SYNCHROTON-A NEW HIGH ENERGY ACCELERATOR",
-\newblock Phys. Rev. 88, pp. 1190, 1952
-
-\bibitem{kicker_inj}
-Gottfried Mülhaupt,
-\newblock ``SYNCHROTRON RADIATION SOURCES A PRIMER, ",
-\newblock World Scientific, Singapore, Chapter 3, 1994
-
-\bibitem{nsls}
-G.M. Wang, W.X. Cheng, X. Yang, J. Choi, T.shaftann,
-\newblock ``STORAGE RING INJECTION KICKERS ALIGNMENT OPTIMIZATION IN NSLS-2",
-\newblock Proceedings of IPAC2017, Copenhagen, Denmark, pp. 4683-4685, THPVA095
-
-\bibitem{PF_kicker}
-A. Ueda, T. Ushiku and T. Mitsuhashi,
-\newblock ``CONSTRUCTION OF TRAVELLING WAVE KICKER MAGNET AND PULSE POWER SUPPLY FOR THE KEK-PHOTON FACTORY STORAGE RING",
-\newblock Proceedings of the 2001 Particle Accelerator Conference, Chicago, pp. 4050-4054, 2001
-
-% Beam Based Measurement of injection parameters
+% Chapter 4
+% Beam based measurement of injection parameters
 \bibitem{beam_based_meas}
 K. Hirano, K. Harada, N. Higashi, S. Nagahashi, A. Ueda, T. Obina, R. Takai, H. Takaki, Y. Kobayashi,
 \newblock ``BEAM BASED MEASUREMENT OF INJECTION PARAMETERS AT KEK-PF",
@@ -1995,7 +1992,13 @@ K. Hirano, K. Harada, N. Higashi, S. Nagahashi, A. Ueda, T. Obina, R. Takai, H. 
 Libera Brilliace+
 \newblock https://www.i-tech.si/accelerators-instrumentation/libera-brilliance-plus/
 
-% Calculation of injection
+\bibitem{PF_kicker}
+A. Ueda, T. Ushiku and T. Mitsuhashi,
+\newblock ``CONSTRUCTION OF TRAVELLING WAVE KICKER MAGNET AND PULSE POWER SUPPLY FOR THE KEK-PHOTON FACTORY STORAGE RING",
+\newblock Proceedings of the 2001 Particle Accelerator Conference, Chicago, pp. 4050-4054, 2001
+
+% Chapter 5
+% Injection Simulation at KEK-PF
 \bibitem{SAD}
 SAD
 \newblock http://acc-physics.kek.jp/SAD/
@@ -2004,16 +2007,31 @@ SAD
 高木宏之,
 \newblock 博士論文``電子蓄積リングにおけるパルス6極電磁石を用いた入射システムの開発研究"
 
+% Chapter 6
+% On line adjustment of accelerator
+\bibitem{conj}
+William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery,
+\newblock ``NUMERICAL RECIPES",
+\newblock Cambridge University Press, Third edition, Chapter 10, pp.515-520, 2007.
+
+% Appendix 1
+% Data Analysis
+\bibitem{Kuboki}
+久保木浩功,
+\newblock ``陽子ビームモニター",
+\newblock 高エネルギー加速器セミナーOHO, 2018.
+
+% Appendix 2
+% Measurement optics about betatron function
 \bibitem{LOCO}
 J. Safranek,
 \newblock ``EXPERIMENTAL DETERMINATION OF STORAGE RING OPTICS USING ORBIT RESPONCE MEASUREMENTS",
 \newblock Nuclear Inst. and Method in Phys. Res. S, 388, pp. 27-36, 1997
 
-% kicker bump matching
-\bibitem{conj}
-William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery,
-\newblock ``NUMERICAL RECIPES",
-\newblock Cambridge University Press, Third edition, Chapter 10, pp.515-520, 2007.
+\bibitem{Kobayashi_oho}
+小林幸則,
+\newblock ``電子ストレージリング",
+\newblock 高エネルギー加速器セミナーOHO, 1993.
 
 \end{thebibliography}
 
