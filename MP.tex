@@ -31,7 +31,7 @@
 {\LARGE 物理科学専攻\par}\vspace{0.3cm} % Faculty name
 {\LARGE 放射光物理研究室\par}\vspace{1.0cm} % Faculty name
 {\LARGE 指導教員  島田賢也\par}\vspace{1.0cm} % Supervisor name
-{\LARGE 2019年1月9日} % Data 
+{\LARGE \today} % Data 
 \end{center}
 \end{titlepage}
 \thispagestyle{empty}
@@ -75,7 +75,7 @@ In this study, firstly we measure the injection parameters on the beam based.  A
 \newpage
 \pagenumbering{roman} % I, II, III, IV
 \tableofcontents
-\listoffigures
+% \listoffigures
 \pagebreak \setcounter{page}{1}
 \pagenumbering{arabic} % 1,2,3
 
@@ -1518,10 +1518,10 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn=800} \sum
 \appendix
 \addcontentsline{toc}{chapter}{付録  信号処理}
 \chapter*{信号処理}
-この節では、ビーム位置検出回路を用いて得られたADC Raw Dataをビーム位置に変換する手順を説明する。測定原理の理論を理解する上でOHOセミナーの資料\cite{Kuboki}を主に参照した。初めにボタン電極から入力される信号をPFリングのダクトでビーム位置に変換するための原理を説明する。次に実際のデータを用いてデータの収集タイミングを決定し、解析の詳細を説明する。
+この節では、ビーム位置モニター(Beam Position Monitor:BPM)で観測される電極から信号を、検出回路を用いてADC Raw Dataに変換し、ビーム位置になおすための手順を説明する。BPMによる測定原理の理論を理解する上でOHOセミナーの資料\cite{Kuboki}を主に参照した。初めにボタン電極から入力される信号をビーム位置に変換するための原理を説明する。次に実際のデータを用いてデータの収集タイミングを決め、解析の手順を説明する。
 %*******************************************************************************
 \section*{測定原理}
-ビーム位置モニター(Beam Position Monitor:BPM)はリングを周回するビームの横方向の位置を調べ、設計軌道への補正や各種パラメータの測定に使用される。ここでは、電極に誘起される電荷量からビーム位置を測定するBPMの原理について説明する。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
+BPMはビームの横方向の位置を測定するモニターとして、設計軌道への補正や各種パラメータの測定に使用される。はじめに電極に誘起される電荷量からビーム位置を測定するBPMの原理について説明する。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
 \begin{equation}
 q = \frac{\lambda }{2\pi R} \int_{-\Delta \phi_0}^{-\Delta \phi_0} \frac{R^2-x^2}{R^2+x^2-2Rx(\varphi-\theta)} d\varphi
 \end{equation}
