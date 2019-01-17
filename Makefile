@@ -25,5 +25,4 @@ distclean: clean
 clean:
 	rm -f *~ $(FILE).dvi $(FILE).aux $(FILE).lof $(FILE).toc \
 	$(FILE).lot $(FILE).log $(FILE).ps $(FILE).blg $(FILE).bbl \
-	$(FILE).spl $(FILE).out
-
+	$(FILE).spl $(FILE).out $(FILE).synctex.gz
