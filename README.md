@@ -1,18 +1,9 @@
 # Master_thesis  
 
-This is my master's thesis, on the injection of the accelerator at KEK-PF.  
-You can download the pdf file. The PDF file is in the directory ./doc.  
-
-## Install
-
-apt-get install texlive2014  
-apt-get install texlive-science  
-
-
-## Requirement
-
-platex(compiler)  
-dvipdfmx(transform pdf from dvi)  
+This is my master's thesis.
+You can download the pdf file.   
+The PDF file is in the directory ./doc.   
+This thesis focused on improving the injection efficiency at KEK-PF.   
 
 # vim Mp.tex
 
