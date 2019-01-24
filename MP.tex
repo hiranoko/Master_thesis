@@ -28,7 +28,6 @@
 {\LARGE 理学研究科物理科学専攻修士論文\par}\vspace{2.5cm} % Department name
 {\huge KEK-PFにおける入射効率改善のための研究\par}\vspace{5.0cm} % Thesis title 
 {\huge 平野広太\par}\vspace{0.5cm} % Author name
-{\LARGE 物理科学専攻\par}\vspace{0.3cm} % Faculty name
 {\LARGE 放射光物理研究室\par}\vspace{1.0cm} % Faculty name
 {\LARGE 指導教員  島田賢也\par}\vspace{1.0cm} % Supervisor name
 {\LARGE \today} % Data 
@@ -396,7 +395,7 @@ w'' + K(s)w - 1/w^3 &=& 0 \\
 \end{equation}
 で与えられる。これは、ベータトロン振動の位相進みを表し、リング一周の積分をして$2\pi$で割った値はチューンと呼び、
 \begin{equation}
-\nu = \frac{1}{2\pi}\int_0^C\frac{ds}{\beta(s)}
+\nu = \frac{1}{2\pi}\oint \frac{ds}{\beta(s)}
 \end{equation}
 で与えられ、加速器一周当たりの振動数を表す。
 線形微分方程式に従う位相空間での座標の移動は転送行列で表現でき、$s_1$と$s_2$を結ぶ転送行列$M(s_2|s_1)$は、
@@ -1910,18 +1909,6 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
         \caption{PFリングのオプティックス(wiggler on/off from LOCO model)}
         \label{loco_wiggler}
     \end{figure}
-
-%******************************************************************************
-\newpage
-\appendix
-\addcontentsline{toc}{chapter}{付録  最適化法}
-\chapter*{最適化法}
-
-\section*{測定原理}
-
-%*******************************************************************************
-
-\section*{測定結果}
 
 %******************************************************************************
 
