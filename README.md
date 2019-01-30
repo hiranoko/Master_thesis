@@ -1,13 +1,12 @@
-# Master_thesis  
+# Stydy for improving injection efficiency at KEK-PF.  
 
-This is my master's thesis.  
-You can download the pdf file.   
-The PDF file is in the directory ./doc.      
+This is the repository for my master thesis.  
 
-# vim Mp.tex
+# vim MP.tex
 
 All text is included.  
-The figure file is in ./figure.
+The pdf of the thesis is in the doc directory.
+The presetation slides is in the pretation directory.
 
 # Abstract  
 
