@@ -1634,10 +1634,10 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 \appendix
 \addcontentsline{toc}{chapter}{付録  信号処理}
 \chapter*{信号処理}
-この節では、ビーム位置モニター(Beam Position Monitor:BPM)で観測される電極から信号を、検出回路を用いてADC Raw Dataに変換し、ビーム位置になおすための手順を説明する。BPMによる測定原理の理論を理解する上でOHOセミナーの資料\cite{Kuboki}を主に参照した。初めにボタン電極から入力される信号をビーム位置に変換するための原理を説明する。次に実際のデータを用いてデータの収集タイミングを決め、解析の手順を説明する。
+この節では、ビーム位置モニター (Beam Position Monitor:BPM)で観測される電極から信号を、検出回路を用いてADC Raw Dataに変換し、ビーム位置になおすための手順を説明する。BPMによる測定原理の理論を理解する上でOHOセミナーの資料\cite{Kuboki}を主に参照した。初めにボタン電極から入力される信号をビーム位置に変換するための原理を説明する。次に実際のデータを用いてデータの収集タイミングを決め、解析の手順を説明する。
 %*******************************************************************************
 \section*{測定原理}
-BPMはビームの横方向の位置を測定するモニターとして、設計軌道への補正や各種パラメータの測定に使用される。はじめに電極に誘起される電荷量からビーム位置を測定するBPMの原理について説明する。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
+BPMはビームの横方向の位置を測定するモニターとして使用される。はじめに電極に誘起される電圧から、ビーム位置を測定するBPMの原理について説明する。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
 \begin{equation}
 q = \frac{\lambda }{2\pi R} \int_{-\Delta \phi_0}^{-\Delta \phi_0} \frac{R^2-x^2}{R^2+x^2-2Rx(\varphi-\theta)} d\varphi
 \end{equation}
@@ -1863,33 +1863,35 @@ x'_n
 \appendix
 \addcontentsline{toc}{chapter}{付録  オプティックスの測定}
 \chapter*{オプティックスの測定}
-本付録では、入射シミュレーションの計算条件に用いるために測定したベータトロン関数の内容について述べる。ベータトロンの測定ではLOCOを実施した\cite{LOCO}。ベータトロンの測定について理解する上でOHOセミナーの資料\cite{Kobayashi_oho}を主に参照した。
+本付録では、ベータトロン関数の測定について記述する。ベータトロン関数は横方向の振動の大きさを表し入射効率の計算に必要なパラメータである。はじめにベータトロン関数の測定方法について説明。その中で測定に使用したLinear Optics Debugging Code LOCO (Linear Optics from Closed Orbits)を説明する。測定結果ではLOCOの解析過程と結果をまとめる。ベータトロン関数の測定原理はOHOセミナーの資料\cite{Kobayashi_oho}を主に参照した。
 \section*{測定原理}
-ベータトロン関数$\beta(s)$の直接的な測定は、四重極強度を微小変化させてチューンシフトを測定する方法とビームのベータトロン振動の振幅から調べる方法がある。間接的な測定は、複数のチューンの位相差を調べて比をとり求める方法やラティスモデルをフィッティングして求める方法がある。チューンシフトの式は以下の、
+ベータトロン関数の直接的な測定は、四重極強度を微小変化させてチューンシフトを測定する方法とベータトロン振動の振幅から測定する方法がある。間接的な測定は、複数のチューンの位相差を調べて比をとり求める方法\cite{castro}や応答行列を軌道フィッティングして求める方法\cite{LOCO}などがある。
+
+はじめにベータトロン関数の直接的な測定についてまとめる。チューンシフトから求める方法は以下の式、
 \begin{equation}
 \Delta\nu = \frac{1}{4\pi} \int_0^s K(s)\beta(s) ds
 \end{equation}
-で与えられる。$\beta$関数は、
+で与えられる。これを整理してベータトロン関数は、
 \begin{equation}
 \beta = \frac{4\pi\Delta\nu}{K(s)L}
 \end{equation}
-で求められる。ここで、Lは4極電磁石の磁石長である。この方法による測定では、K値の正確な測定は磁石の履歴のため困難である。ベータトロン振動から求める方法は既知のチューンがあって求められる。ステアリング強度$\Delta \theta$を変化させて生じるCOD (closed orbit distortion)は、
+で求められる。ここでLは4極電磁石の磁石長である。この方法では式にK値を含み、磁石の履歴をうけるため正確な測定は困難である。ベータトロン振動の振幅から測定する方法はステアリング強度$\Delta \theta$を変化させて生じるCOD (closed orbit distortion)は以下の式、
 \begin{equation}
 \label{LOCO}
 x_{COD}(s) = \frac{\sqrt{\beta(s_1)\beta(s_0)}}{2\sin (\pi \nu)}\cos (\pi \nu-|\phi(s_0)-\phi(s_1)|)\Delta \theta
 \end{equation}
-で記述される。位相関係が小さいときベータトロン関数$\beta(s)$は、
+で与えられる。これを整理して位相関係が小さいときベータトロン関数は、
 \begin{equation}
 \beta(s_1) = \frac{2x_{COD}tan(\pi \nu)}{\Delta \theta}
 \end{equation}
-で与えられる。この方法では、Turn-by-Turnのビーム位置モニター(BPM)を用いて、既知のチューンとステアリング強度の変化量$\Delta \theta$があって、振幅からベータトロン関数$\beta(s)$が求められる。測定の精度は、BPMとステアリング強度の精度とBPMとステアリングまでの位相関係による。
+で求められる。この方法では、ターンバイターンのビーム位置モニターを用いて、既知のチューンとステアリング強度の変化量$\Delta \theta$があって、振幅からベータトロン関数$\beta(s)$が求められる。測定に既知のチューンが必要であるが正確なチューンの測定は難しい。測定精度はBPMとステアリング強度の精度とBPMとステアリングまでの位相関係に影響される。
 
-最後に、応答行列をラティスモデルにフィッティングさせて間接的にベータトロン振動の測定できるるLOCO (Linear optics from closed orbit: LOCO)について説明する\cite{LOCO}。LOCOは、蓄積リングの補正電磁石を微小な角度で蹴り、BPMで観測される式(\ref{LOCO})の振幅の応答行列から加速器パラメータを推定する手法である。推定は軌道レスポンスと実測のレスポンスの残差が最小となるように加速器パラメータをフィッティングして行う。残差の式は、
+つぎにベータトロン関数の間接的な測定についてまとめる。間接的な測定の利点は、ベータトロン関数を複数のパラメータから測定できる点にある、パラメータを変えながら複数回測定して平均化することによって測定の堅牢性を確保できる。測定は位相差から求める方法や軌道フィッティングから求める方法などがあるが、PFでは任意の場所に設置して位相差を調べることができる高速BPMは小数であるため、軌道フィッティングから求めるLOCOを採用した。LOCOについて説明する。LOCOとは蓄積リングの補正電磁石を微小な角度で蹴り、BPMで観測される式(\ref{LOCO})の振幅の応答行列からフィッティングを行って、加速器パラメータを推定する手法である。推定は軌道レスポンスと実測のレスポンスの残差が最小となるように軌道をフィッティングする。残差の式は、
 \begin{equation}
 \label{obj_LOCO}
-f(\Delta K) = \chi ^2 = \sum_{i,j}\frac{(R^{meas}_{ij}-R^{model}_{ij}(\Delta K))^2}{\sigma_i^2}
+f \left(\Delta K \right) = \chi ^2 = \sum_{i,j}\frac{ \left(R^{meas}_{ij}-R^{model}_{ij} \left(\Delta K \right) \right)^2}{\sigma_i^2}
 \end{equation}
-で表記する。式(\ref{obj_LOCO})中のiおよびjはそれぞれBPM番号とステアリング番号を表している。$\sigma$はBPMのノイズレベルでありフィッティング時の重みづけの役割を果たしている。測定される応答行列はビームに対して以下の係数がかかる。BPMゲインは実際のビームの位置$x_{beam}$に対して、
+である。式(\ref{obj_LOCO})中のiおよびjはそれぞれBPM番号とステアリング番号を表す。$\sigma$はBPMのノイズレベルでありフィッティング時の重みづけの役割を果たす。測定された応答行列は以下の変換が加えられる。BPMゲインは実際のビームの位置$x_{beam}$に対して、
 \begin{equation}
 \begin{pmatrix}
 x_{meas} \\
@@ -1924,12 +1926,12 @@ R_{i,j}^{meas} &=& \frac{\Delta x^{meas}}{\theta_x^{meas}} \nonumber \\
 &=& \frac{g_x\Delta x^{beam}}{\theta_x^{beam}/g_{kx}} \nonumber \\
 &=& g_xg_{kx}R_{xx,ij}^{beam}
 \end{eqnarray}
-で示される。BPMとステアリング強度のゲインは分離して測定でき固定することで式(\ref{obj_LOCO})は非線形の最小化問題を解くのと同様になる。最小化問題を解くことでベータトロン関数を間接的に求めることができる。
+で示される。BPMとステアリング強度のゲインは分離して測定でき固定することで式(\ref{obj_LOCO})は非線形の最小化問題を解くのと同様になる。この最小化問題を解くことでベータトロン関数を求められる。
 
 %*******************************************************************************
 
 \section*{測定結果}
-応答行列の測定は非線形効果を最小限に抑えるためステアリングの強度は水平で0.2 A、垂直で0.1 Aとした。これによってCODは300 μmにおさめている。また、再現性を確保するため5回の初期化を実施した。BPM感度係数とステアリング強度のゲインは定数とした。LOCO で用いたパラメータを表\ref{loco_parameter}にまとめた。はじめに2極成分を最急降下法でフィッティングし、その結果を実測のレスポンス$R_{meas}$とモデルのレスポンスの差分$R_{meas}-R_{model}$で示す。
+応答行列の測定は非線形効果を最小限に抑えるためステアリングの強度を水平で0.2 \si{A}、垂直で0.1 \si{A}とした。これによってCODを300 \si{\mu m}におさめている。また再現性を確保するため5回の初期化を挟む。BPM感度係数とステアリング強度のゲインは解を固定するため定数とした。LOCOで用いたパラメータを表\ref{loco_parameter}にまとめる。初めに2極成分をフィッティングした。結果を図\ref{loco_horizontal_dipole}と図\ref{loco_vertical_dipole}に実測のレスポンス$R_{meas}$とモデルのレスポンスの差分$R_{meas}-R_{model}$で示す。ここでクランチの影響は小さいとして無視している。
 
     \begin{table}[H]
     \caption{LOCOパラメータ}
@@ -1960,6 +1962,7 @@ R_{i,j}^{meas} &=& \frac{\Delta x^{meas}}{\theta_x^{meas}} \nonumber \\
         \end{minipage}
         \end{tabular}
         \caption{水平方向の応答行列}
+        \label{loco_horizontal_dipole}
     \end{figure}
 
     \begin{figure}[H]
@@ -1977,15 +1980,16 @@ R_{i,j}^{meas} &=& \frac{\Delta x^{meas}}{\theta_x^{meas}} \nonumber \\
         \end{minipage}
         \end{tabular}
         \caption{垂直方向の応答行列}
+        \label{loco_vertical_dipole}
     \end{figure}
 
-解の収束を目的とするため4極成分、Skew成分は順番にパラメータを増やしてフィッティングさせている。次に4極成分の調整を行う。4極成分のフィッティングはベータ関数、分散関数、チューン、位相進み変えるパラメータとなるので更新は以下の式で行う。
+次に4極成分をパラメータに加えてフィッティングした。4極成分のフィッティングはベータ関数、分散関数、チューン、位相進み変えるパラメータで更新は以下の式で行う。
 
 \begin{equation}
 u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{\Delta x^2}{\Delta p_3},\cdots,-\frac{\Delta x^2}{\Delta p_n} \right)
 \end{equation}
 
-そのときの結果の縦軸を目標値、横軸を最急降下法の反復回数でプロットし以下の図に示す。この更新では、$x^2$に対する偏微分の値が最も大きい方向にパラメータを振って極小値を求めている。
+図\ref{loco_H}にフィッティングの結果を示す。縦軸は残差の大きさ、横軸は最急降下法の反復回数を表す。この調整では残差の変化量に相当する偏微分の値が最も大きい方向にパラメータを更新している。
 
     \begin{figure}[H]
         \centering
@@ -1994,9 +1998,9 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
         \label{loco_H}
     \end{figure}
 
-四極磁場強度をフィッティングした後、スキュー成分のみを振ってフィッティングを行った。図はレスポンスの残差が更新される様子を示す。
+最後にスキュー成分をパラメータに加えてフィッティングした。図\ref{loco_skew}はレスポンスの残差が更新される様子を示す。
 
-    \begin{figure}[htbp]
+    \begin{figure}[H]
         \centering
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
@@ -2011,21 +2015,22 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
         \end{minipage}
         \end{tabular}
         \caption{4極スキュー成分のフィッティング.}
+        \label{loco_skew}
     \end{figure}
 
-以上の操作によって、応答行列の誤差は水平方向で$5.2 \mu m$、垂直方向で$2.8 \mu m$と収束した。これはBPMのノイズレベルと比べて大きい値であるが、入射シミュレーションに導入して差分をみるのに十分な精度である。更に誤差を追い込むには、簡単のため省略したゲインの測定とクランチの効果を含むことが考えられる。実験結果であるLOCOモデルと計算モデルオプティックスの比較を図\ref{loco_optics}に示す。また、ウィグラーの電源を切り替えた時の結果を図\ref{loco_wiggler}に示す。
+以上の操作によって、応答行列の誤差は水平方向で5.2 \si{\mu m}、垂直方向で2.8 \si{\mu m}と収束した。これはシミュレーションに導入するのに十分な精度である。更に誤差を小さくするためにはゲインの測定とクランチの効果を計算すればよい。実験結果であるLOCOモデルと計算モデルオプティックスの比較を図\ref{loco_optics}に示す。また、ウィグラーの電源を切り替えた時の結果を図\ref{loco_wiggler}に示す。
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=120mm]{./figure/LOCO/optics.png}
-        \caption{PFリングのオプティックス}
+        \caption{PFリングのオプティックス。実線はデザインモデルのベータトロン関数を表す。破線は挿入光源の影響によって歪んだベータトロン関数を表す。ベータトロン関数の歪みはアクセプタンスにあらわれる。入射シミュレーションでは実際の運転時にビームが受けるベータトロン関数を適用した。}
         \label{loco_optics}
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=120mm]{./figure/LOCO/wiggler.png}
-        \caption{PFリングのオプティックス(wiggler on/off from LOCO model)}
+        \caption{PFリングのオプティックス(wiggler on/off from LOCO model)。点線は挿入光源の電源を入れた時のベータトロン関数を表す。破線は挿入光源の電源を入れていないときのベータトロン関数を表す。}
         \label{loco_wiggler}
     \end{figure}
 
@@ -2168,15 +2173,20 @@ William H. Press, Saul A. Teukolsky, William T. Vetterling and Brian P. Flannery
 
 % Appendix 2
 % Measurement optics about betatron function
-\bibitem{LOCO}
-J. Safranek,
-\newblock ``EXPERIMENTAL DETERMINATION OF STORAGE RING OPTICS USING ORBIT RESPONCE MEASUREMENTS",
-\newblock Nuclear Instruments and Methods in Physics Research Section A, 388, 27-36, 1997.
-
 \bibitem{Kobayashi_oho}
 小林幸則,
 \newblock ``電子ストレージリング",
 \newblock 高エネルギー加速器セミナーOHO, 1993.
+
+\bibitem{castro}
+P. Castro, J. Borer, A. Burns, G. Morpurgo and R. Schmidt,
+\newblock ``BETATRON FUNCTION MEASUREMENT AT LEP USING THE BOM 1000 TURNS FACILITY",
+\newblock Proceedings of the 2001 Particle Accelerator Conference, pp. 2103-2105, 1993.
+
+\bibitem{LOCO}
+J. Safranek,
+\newblock ``EXPERIMENTAL DETERMINATION OF STORAGE RING OPTICS USING ORBIT RESPONSE MEASUREMENTS",
+\newblock Nuclear Instruments and Methods in Physics Research Section A, 388, 27-36, 1997.
 
 \end{thebibliography}
 
