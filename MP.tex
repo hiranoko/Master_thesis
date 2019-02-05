@@ -149,7 +149,7 @@ BPMで観測される情報はビームの重心位置である。PFではリン
     \end{figure}
 
 \section*{結論}
-本論文で実施した入射スタディは、従来の問題とされていた誤差を多く含む加速器モデルでのパラメータ補正と最適化を提案した。この手法ではドリフト空間を挟んだBPMの電極さえあれば、コンポーネントの変更なしに同様のスタディを実施することが可能である。本論文はシミュレーションだけでなくビームスタディと合わせた比較を行い、重要な試験結果となっている。また必要な解析コードはすべて独自に開発した。スタディでは測定が困難とされ他施設でも実施されていなかった、輸送路終端部の電磁石の応答と入射ビームの位相空間プロットをビームベースで得た。入射最適化では、発散させることなく自動で振動抑制を成功させている。今後は入射ビームの位相空間調整を行う。また輸送路の電磁石の応答測定、ビームを使ったのオプティックスマッチングなど検討する予定である。
+本論文で実施した入射スタディは、従来の問題とされていた誤差を多く含む加速器モデルでのパラメータ補正と最適化を提案した。この手法ではドリフト空間を挟んだBPMの電極さえあれば、コンポーネントの変更なしに同様のスタディを実施することが可能である。本論文はシミュレーションだけでなくビームスタディと合わせた比較を行い結果をまとめている。また必要な解析コードはすべて独自に開発した。スタディでは測定が困難とされ他施設でも実施されていなかった、輸送路終端部の電磁石の応答と入射ビームの位相空間プロットをビームベースで得た。入射最適化では、発散させることなく自動で振動抑制を成功させている。今後は入射ビームの位相空間調整を行う。また輸送路の電磁石の応答測定、ビームを使ったのオプティックスマッチングなど検討する予定である。
 
 % Figure/Table list
 \par
@@ -167,9 +167,9 @@ BPMで観測される情報はビームの重心位置である。PFではリン
 
 RF加速器の形状は線形加速器と円形加速器の2種類がある。円形加速器中の荷電粒子が一様磁場中を運動する場合、ローレンツ力と遠心力によるつり合いで運動方程式が記述される。粒子の速度が光速に比べて小さい非相対論的な場合、質量は静止質量に等しいので周波数は獲得するエネルギーによらずほぼ一定となる。粒子の速度が光速に比べて無視できない場合、等時性は失われるので加速周波数との同期をとる必要がある。同期の条件を満たした円形加速器はシンクロトロンと呼ばれ、軌道半径を一定に保ちながら荷電粒子を加速し、偏向電磁石の磁場の強度を加速にあわせて調整している。シンクロトロンの加速における問題は、粒子の周回周期と高周波の同期を如何に取るかという点にあった。この問題は1945年にロシアのヴェクスラーとアメリカのマクミランによって独立に位相安定性の原理\cite{phase_focusing}が発見され解決された。軌道半径が変わらないことにより、磁場は軌道部分だけにあればよくなるので、電磁石が小型化された。その後、1952年にクーラン、リビングストンらによって発見された強集束の原理\cite{Courant}によって、更に加速器全体の小型化が可能となった。これらの原理が加速器の高エネルギー化に貢献した。
 
-高エネルギーで加速された相対論的速度で運動する荷電粒子は、磁場によって曲げられたとき、その加速度方向に電磁波を発する。この現象はシンクロトロンで初めて観測され\cite{radiation}、当時は、荷電粒子のエネルギー損失となるため障害と考えられていた。しかし、原理的にどのような波長帯域でも発生することが可能であり、鋭い指向性と高い放射パワーから光源サイズや発散角をレーザー並みに小さくできることから放射光源としての有用性が見出され、放射光源としての加速器が開発されてきた。
+高エネルギーで加速された相対論的速度で運動する電子ビームは、磁場によって曲げられたとき、その加速度方向に電磁波を発する。この現象はシンクロトロンで初めて観測され\cite{radiation}、当時はエネルギー損失となる障害と考えられていた。しかし、原理的にどのような波長帯域でも発生することが可能であり、鋭い指向性と高い放射パワーから光源サイズや発散角をレーザー並みに小さくできることから放射光源としての有用性が見出され、放射光源としての加速器が開発されてきた。
 
-放射光源としての加速器である電子蓄積リングを運転するためには、線形加速器もしくはブースターシンクロトロンで目的のエネルギーまで加速された後、ビーム輸送路を通して主リングを入射する構成が必要である。主リングを周回する荷電粒子がシンクロトロン放射して放射光を発生する。加速器は以下のコンポーネントで構成される複雑なシステムである。システムの構成には荷電粒子を曲げ円軌道にするための多数の偏向電磁石、荷電粒子の軌道を集束させるための4極電磁石、粒子を加速させるためのRF空洞、強い輝度を得るために使われる挿入光源、入射に用いられるキッカー電磁石やセプタム電磁石など多くのコンポーネントが挙げられる。これら全てのコンポーネントを制御して、高輝度、高精度のビームを安全に安定して運用することが光源加速器に要求される。
+放射光源としての加速器である蓄積リング型放射光源を運転するためには、線形加速器もしくはブースターシンクロトロンで目的のエネルギーまで加速された後、ビーム輸送路を通して主リングを入射する構成が必要である。主リングを周回する電子ビームがシンクロトロン放射して放射光を発生する。加速器は以下のコンポーネントで構成される複雑なシステムである。システムの構成には電子ビームを曲げ円軌道にするための多数の偏向電磁石、電子ビームの軌道を集束させるための4極電磁石、粒子を加速させるためのRF空洞、強い輝度を得るために使われる挿入光源、入射に用いられるキッカー電磁石やセプタム電磁石など多くのコンポーネントが挙げられる。これら全てのコンポーネントを制御して、高輝度、高精度のビームを安全に安定して運用することが要求される。
 %*******************************************************************************
 \section{Photon Factory}
 茨城県つくば市に高エネルギー加速器研究機構 (KEK)の蓄積リング型放射光源 (Photon Factory Ring:PF)がある\cite{PF}。PFは1982年の運転開始以来、2002年の高輝度化と2005年の直線部増強を経て、表\ref{Parameter_PF}に示す基本性能を有する。図\ref{Lattice_PF}と図\ref{Optics_PF}に、PFリングの電磁石の配置図とオプティックスを示す。
@@ -883,6 +883,234 @@ PFでは入射ビームの調整をビーム輸送路の上流から補正電磁
     \end{tabular}
     \end{table}
 
+\section{信号処理}
+本章では、入射パラメータの測定にて記述した、電極から返されるADC raw dataをビーム位置に変化する手順とパルス波形に再構築する手順の説明する。初めにBPMの測定原理をまとめる。式の導出はOHOセミナーの資料\cite{Kuboki}を参照した。次にデータ処理にてADC raw dataをビーム位置に変換するため開発した解析をまとめる。最後にデータの収集タイミングを解析してパルス波形の再構築するために行ったタイミングの解析をまとめる。
+%*******************************************************************************
+\subsection{測定原理}
+ビーム位置モニター(Beam Position Monitor:BPM)はビームの横方向の位置を測定する、モニターとして使用される。ここでBPMの電極はボタン電極、形状は円筒形を考える。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
+\begin{equation}
+q = \frac{\lambda }{2\pi R} \int_{-\Delta \phi_0}^{-\Delta \phi_0} \frac{R^2-x^2}{R^2+x^2-2Rx(\varphi-\theta)} d\varphi
+\end{equation}
+で表される。ここで、x、$W << R$とすると、
+\begin{equation}
+\label{line_charge}
+q = \frac{\lambda}{2\pi R} \left(1+\frac{2x}{R} \right)
+\end{equation}
+に計算される。軌道変位xが大きいときは式(\ref{line_charge})が示すように、誘導電荷と変位の関係は非線形になる。このことはビーム位置モニターとしてxの大きい領域まで使用する場合、x-q関係を補正する必要があることを示唆している。ボタン電極からの信号は、電荷量と電極までの距離に比例した電圧波形として同軸ケーブルに接続された処理回路まで伝搬される。電極部は伝搬系とインピーダンスマッチしておらず、ボタン周辺と真空チェンバーとの面から生じるキャパシタンス成分が強く、電荷の時間変動$dq/dt$の電流源で信号を発生する。したがってこれに接続されている50$\Omega$の同軸ケーブル入り口では等価回路の回路方程式より、
+\begin{equation}
+\label{eq_cir_capa}
+\frac{dq}{dt}=C\frac{dV}{dt}+\frac{V}{R'}
+\end{equation}
+になる。発生する電圧をラプラス変換にて求めると、
+\begin{equation}
+\label{hpf_filter}
+V(s) = \frac{q(s)}{C} \frac{s}{s+\frac{1}{CR} }
+\end{equation}
+となる。式(\ref{hpf_filter})からBPMは微分時定数$\tau = CR$のハイパスフィルター(HPF)型の周波数特性を示すことが予想される。バンチの幅が時定数より十分小さければ出力電圧はバンチの形を再現する。このモニターでは動作原理上、電極の長さLがバンチ幅より短くなければならない。
+
+また、ボタン電極型の特徴として静電容量と時定数が小さい。したがって進行方向のバンチ幅が十分に短くないときビーム進行方向の電荷分布の影響を受ける。その分布を$f(t)$とすると、
+\begin{equation}
+\lambda(\tau) = Nef(\tau) = \frac{i_0}{f_0}f(\tau)
+\end{equation}
+で表される。ここで$f(\tau)$の積分値は1に規格化し、$f_0$、$\tau$はそれぞれ周回周波数、バンチ時間幅である。電極に誘起される全電荷は、
+\begin{equation}
+Q(t) = \frac{i_0W}{2\pi af_0\tau} \left(a+\frac{x}{2a} \right)[ <f> + \eta {f(\tau)-<f>}]
+\end{equation}
+である。ここで、$<f>$は$f(t)$の平均を示し、$\eta$はTransit time factorを示す。$\eta$は$\eta<1$かつ、電極の長さLとバンチ幅$\tau$の関数である。
+
+ビームの分布関数を次のように仮定する。
+\begin{equation}
+f(t) = \frac{1}{t}\cos ^2(\frac{\pi t}{2\tau })
+\end{equation}
+すると、
+\begin{eqnarray}
+Q(t) &=& \frac{ i_0 WL}{ 4\pi acf_0\tau } \left( 1+\eta \cos \left(\frac{\pi t}{\tau} \right) \right) \\
+\eta &=& \frac{ \sin (\theta_\tau /2)}{ (\theta_\tau /2)} \\
+\theta_\tau &=& \frac{\pi L}{c \tau}
+\end{eqnarray}
+となる。回路方程式(\ref{eq_cir_capa})は解けて、出力波形は次のように求まる。
+\begin{equation}
+V(t) = -\frac{i_0WL\eta }{4\pi acf_0t}
+\end{equation}
+このモニターは電極の形が小さいので、真空チェンバー内に4個取り付けて、水平、垂直両方向の軌道変位を次の計算式により求めることができる。
+\begin{equation}
+\frac{ (V_A+V_D)-(V_B+V_C) }{ V_A+V_B+V_C+V_D } = U^i
+\end{equation}
+\begin{equation}
+\frac{ (V_A+V_D)-(V_B+V_C) }{ V_A+V_B+V_C+V_D } = V^j
+\end{equation}
+位置感度係数kは円形チェンバーの場合x, y方向ともに同じ値になる。円筒型でないBPMの感度係数は有限要素法や境界要素法などの数値計算、もしくはワイヤ校正によって求める。通常、ワイヤー較正は、ビームサイズの小さい電子や陽子を観測する際に含まれる非線形効果を補正して精度よく位置を測定するために用いられる。
+
+本研究では、xの大きい領域まで使用するためにワイヤー較正を使用した。BPMダクトの断面図を図\ref{figure_CSBPM}に示す。ダクトには4極の電極があり、伝搬ケーブルを接続されて各電極の信号比からビーム位置を導出できる。ビーム位置は、
+\begin{eqnarray}
+\label{BPM_calc}
+x = \sum_{i=0}^3 \sum_{j=0}^3 k_x(i,j)U^iV^j \nonumber \\
+y = \sum_{i=0}^3 \sum_{j=0}^3 k_y(i,j)U^iV^j
+\end{eqnarray}
+と表記される。kはモニターのマッピング情報から得られる非線形感度係数を表し、補正には表\ref{coef_BPM}のリストを使用した。\ref{coef_BPM}の非線形感度係数を使用した時のビーム位置マッピングは図\ref{calc_BPM}に示す。青点がビームダクト内をワイヤーを通して電流を流した位置、赤点は式(\ref{BPM_calc})で計算して測定される位置を示す。図\ref{calc_BPM}より、電極の外側を通過するビームは非線形応答によって縮退されることを確認できる。
+
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=100mm]{./figure/BPM/CSbpm.png}
+        \caption{BPMダクトの断面図.}
+        \label{figure_CSBPM}
+    \end{figure}
+
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=100mm]{./figure/BPM/Plot_BPM.png}
+        \caption{三次多項式フィットによる計算されたビーム位置}
+        \label{calc_BPM}
+    \end{figure}
+
+    \begin{table}[H]
+    \caption{BPMの非線形応答係数}
+    \label{coef_BPM}
+    \centering
+    \begin{tabular}{ c  c c } \hline
+    Coefficients & Horizontal & Vertical \\ \hline
+    $k(0,0)$ & 0.000 & 0.000 \\
+    $k(1,0)$ & 17.120 & 0.000 \\
+    $k(1,1)$ & 0.000 & 16.432 \\
+    $k(2,0)$ & 0.000 & 0.000 \\
+    $k(2,1)$ & 0.000 & 0.000 \\
+    $k(2,2)$ & 0.000 & 0.000 \\
+    $k(3,0)$ & 18.829 & 0.000 \\
+    $k(3,1)$ & 0.000 & -11.477 \\
+    $k(3,2)$ & -27.138 & 0.000 \\
+    $k(3,3)$ & 0.000 & 7.431 \\ \hline
+    \end{tabular}
+    \end{table}
+
+%*******************************************************************************
+\subsection{データ処理}
+ボタン電極からの入力信号は、バンドパスフィルターを通過してADC変換された波形で観測される。図\ref{signal_start}に入射ビームのバンチを観測した結果を拡大して示す。縦軸のADC Countはビームの電荷量に相当する。横軸のSampleは入射トリガーが来てバッファー内に格納される信号を112 \si{MHz}でサンプリングした時間に相当する。バッファーに格納される範囲はメモリの容量で決まり、0から4096である。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=100mm]{./figure/BPM/raw_stored.png}
+        \caption{Libera Brilliance plusからのADC生データ.}
+        \label{signal_start}
+    \end{figure}
+
+図\ref{signal_start}より、信号の周期は74 Samplesであることがわかる。これは自己相関関数を用いて相関の高い点の間隔を調べて求めた。
+データ処理は、図\ref{signal_start}の信号から、オフセットを取り除き、1周期ごとに取り出して、ADC Countの絶対値を総和して、信号の大きさにする。この値を式(\ref{BPM_calc})に代入して位置を求めた。ビーム位置の取得は複数回行い、平均値を取得するが、入射ビームでは電荷量にばらつきがあるので次の例外処理を加えた。一例として図\ref{BPM_ex1}に入射振動の測定を100回行った結果を示す。左図の縦軸はビーム位置、右図の縦軸は電極からの信号の総和、横軸は測定回数に相当する。
+
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{c}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/BPM/bpm_ex2.png}
+        \hspace{18mm} [1]水平方向のビーム位置
+        \end{minipage}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/BPM/bpm_ex3.png}
+        \hspace{16mm} [2]電極からの信号量
+        \end{minipage}
+        \end{tabular}
+        \caption{入射振動の測定結果}
+        \label{BPM_ex1}
+    \end{figure}
+
+図\ref{BPM_ex1}より、Linacからのビームのばらつきとダクト削れた影響が信号の大きさにあらわれて、測定に失敗した重心位置が観測されることをわかる。このようなデータ除去を例外処理に追加した。
+
+\subsection{データ収集タイミング}
+データ収集タイミングはLinacでつくられた入射トリガを用いている。基本周波数はKEKBのマスターオシレータ510  \si{MHz}を分周した10.38546 \si{MHz}を位相同期回路の入力に用いて生成した571.2 \si{MHz}と、これを分周逓倍した10.39 \si{MHz}である\cite{LINAC_timing}。入射トリガーを受け取り、入力信号はバッファーに格納され、入射やキッカー電磁石の励磁が始まる。
+
+はじめに記録が始まるタイミングと入射ビームのタイミングを調べる。測定は0.25 \si{ｎC}のビームを入射してボタン電極から返される信号を調べる。図\ref{signal_start}にボタン電極から入力される信号を示す。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=100mm]{./figure/BPM/start.png}
+        \caption{入射振動の生データ.}
+        \label{signal_start2}
+    \end{figure}
+
+図\ref{signal_start2}は図\ref{signal_start}の横軸を2000 Sampleまで拡大した図である。図\ref{signal_start2}からビームの入射タイミングがわかる。入射トリガとキッカー電磁石の励磁タイミングは正確で、タイミングを固定して(Sample=405)信号の抽出を行った。
+
+次にトリガーとキッカーの励磁タイミングの同期をとるため計算と測定を行った。計算ではキッカー電磁石が半正弦波としてディレイタイムを変えた時のBPMで観測される振動を求める。測定ではディレイタイムを変えた時の蓄積ビームの振動を調べる。以下にK3の蹴り角を加えた時、ディレイタイムを周期時間まで掃引してビームの振動を計算した結果を示す。BPMの位置は以下の場所を使用した。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=110mm]{./figure/BPM/lattice.png}
+        \caption{BPMの位置}
+        \label{timing_lattice}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=110mm]{./figure/BPM/kick.png}
+        \caption{K3に蹴り角を加えた時BPMで観測される振動(計算)}
+        \label{oscil_K3}
+    \end{figure}
+
+図\ref{oscil_K3}の横軸の目盛りは周期時間である。縦軸はキッカーの蹴り角と各BPMで観測される振幅の比率を表す。図\ref{oscil_K3}の一周期目は単なる転送の応答であり、
+\begin{equation}
+\label{trans_single}
+\begin{pmatrix}
+x \\
+x'
+\end{pmatrix}_{BPM}
+=
+M(x_{BPM}|x_{K3})
+\begin{pmatrix}
+0 \\
+\theta(t)
+\end{pmatrix}_{Kicker}
+\end{equation}
+で表される。2周期(624から1248 nsec)の振動は前ターンの振動を含み、
+\begin{equation}
+\begin{pmatrix}
+x_{n+1} \\
+x'_{n+1}
+\end{pmatrix}_{BPM}
+=
+M(x_{BPM}|x_{K3}) \left \{
+\begin{pmatrix}
+x \\
+x'
+\end{pmatrix}_{K3}
++
+\begin{pmatrix}
+0 \\
+\theta(t)
+\end{pmatrix}_{K3}
+\right \}
+\end{equation}
+で記述される。3周期以降は、蹴り角が含まれないので応答は一周の転送行列を重ねて、
+\begin{equation}
+\begin{pmatrix}
+x_{n+1} \\
+x'_{n+1}
+\end{pmatrix}_{BPM}
+=
+M(x_{BPM}|x_{K3})
+\begin{pmatrix}
+x_n \\
+x'_n
+\end{pmatrix}_{K3}
+\end{equation}
+となる。次にディレイタイムを掃引した時の蓄積ビームの振動を測定して平均値をプロットしたものを示す。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=140mm]{./figure/BPM/bpm.png}
+        \caption{K3に蹴り角を加えた時BPMで観測される振動(実測)}
+        \label{timing_kick}
+    \end{figure}
+
+図\ref{timing_kick}の囲った横軸の範囲が周回時間に相当する。3つの線のプロットは1周期違いのプロットであり、計算で求めた0から$624\times3$の範囲に相当する。2つの結果を比べるため、図を整形して比較したものを図\ref{com_kick}に示す。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=140mm]{./figure/BPM/K3_tim.png}
+        \caption{K3に蹴り角を加えた時BPMで観測される振動の比較}
+        \label{com_kick}
+    \end{figure}
+
+図\ref{com_kick}のエラーバー付きは図\ref{timing_kick}の結果であり、標準偏差を示す。実線は計算値を示す。波形の立ち上がりの部分では半正弦波で振動をよく計算で来ているが、2周期目、3周期目と違いが大きくなっていることがわかる。これはパルス幅、反射の影響を表している。タイミングの合わせ方は、図\ref{timing_kick}の切り出し範囲を調整することで行った。同様の操作を全てのキッカーに対して行っている。
 %*******************************************************************************
 \section{測定結果\label{meas_result_inj}}
 \subsection{入射点でのビーム位置関係}
@@ -1275,6 +1503,179 @@ R_{multi} = \sum_{t}^{delay} R_{single}
 
 以上の操作によって、局所バンプの高さを決めた時のキッカー電磁石の蹴り角の組み合わせと入射ビームの水平方向の位相空間情報が決定される。垂直方向の位相空間情報は原点に、縦方向の位相空間情報はシンクロトロン入射のためエネルギー偏差を加えて、これを入射の始条件とする。
 %*******************************************************************************
+\section{オプティックスの測定}
+本章では、ベータトロン関数の測定について記述する。ベータトロン関数は横方向の振動の大きさを表し入射効率の計算に必要なパラメータである。はじめにベータトロン関数の測定方法について説明。その中で測定に使用したLinear Optics Debugging Code LOCO (Linear Optics from Closed Orbits)を説明する。測定結果ではLOCOの解析過程と結果をまとめる。ベータトロン関数の測定原理はOHOセミナーの資料\cite{Kobayashi_oho}を主に参照した。
+\subsection{測定原理}
+ベータトロン関数の直接的な測定は、四重極強度を微小変化させてチューンシフトを測定する方法とベータトロン振動の振幅から測定する方法がある。間接的な測定は、複数のチューンの位相差を調べて比をとり求める方法\cite{castro}や応答行列を軌道フィッティングして求める方法\cite{LOCO}などがある。
+
+はじめにベータトロン関数の直接的な測定についてまとめる。チューンシフトから求める方法は以下の式、
+\begin{equation}
+\Delta\nu = \frac{1}{4\pi} \int_0^s K(s)\beta(s) ds
+\end{equation}
+で与えられる。これを整理してベータトロン関数は、
+\begin{equation}
+\beta = \frac{4\pi\Delta\nu}{K(s)L}
+\end{equation}
+で求められる。ここでLは4極電磁石の磁石長である。この方法では式にK値を含み、磁石の履歴をうけるため正確な測定は困難である。ベータトロン振動の振幅から測定する方法はステアリング強度$\Delta \theta$を変化させて生じるCOD (closed orbit distortion)は以下の式、
+\begin{equation}
+\label{LOCO}
+x_{COD}(s) = \frac{\sqrt{\beta(s_1)\beta(s_0)}}{2\sin (\pi \nu)}\cos (\pi \nu-|\phi(s_0)-\phi(s_1)|)\Delta \theta
+\end{equation}
+で与えられる。これを整理して位相関係が小さいときベータトロン関数は、
+\begin{equation}
+\beta(s_1) = \frac{2x_{COD}tan(\pi \nu)}{\Delta \theta}
+\end{equation}
+で求められる。この方法では、ターンバイターンのビーム位置モニターを用いて、既知のチューンとステアリング強度の変化量$\Delta \theta$があって、振幅からベータトロン関数$\beta(s)$が求められる。測定に既知のチューンが必要であるが正確なチューンの測定は難しい。測定精度はBPMとステアリング強度の精度とBPMとステアリングまでの位相関係に影響される。
+
+つぎにベータトロン関数の間接的な測定についてまとめる。間接的な測定の利点は、ベータトロン関数を複数のパラメータから測定できる点にある、パラメータを変えながら複数回測定して平均化することによって測定の堅牢性を確保できる。測定は位相差から求める方法や軌道フィッティングから求める方法などがあるが、PFでは任意の場所に設置して位相差を調べることができる高速BPMは小数であるため、軌道フィッティングから求めるLOCOを採用した。LOCOについて説明する。LOCOとは蓄積リングの補正電磁石を微小な角度で蹴り、BPMで観測される式(\ref{LOCO})の振幅の応答行列からフィッティングを行って、加速器パラメータを推定する手法である。推定は軌道レスポンスと実測のレスポンスの残差が最小となるように軌道をフィッティングする。残差の式は、
+\begin{equation}
+\label{obj_LOCO}
+f \left(\Delta K \right) = \chi ^2 = \sum_{i,j}\frac{ \left(R^{meas}_{ij}-R^{model}_{ij} \left(\Delta K \right) \right)^2}{\sigma_i^2}
+\end{equation}
+である。式(\ref{obj_LOCO})中のiおよびjはそれぞれBPM番号とステアリング番号を表す。$\sigma$はBPMのノイズレベルでありフィッティング時の重みづけの役割を果たす。測定された応答行列は以下の変換が加えられる。BPMゲインは実際のビームの位置$x_{beam}$に対して、
+\begin{equation}
+\begin{pmatrix}
+x_{meas} \\
+y_{meas}
+\end{pmatrix}
+=
+\begin{pmatrix}
+g_x & c_x \\
+c_y & g_y
+\end{pmatrix}
+\begin{pmatrix}
+x_{beam} \\
+y_{beam}
+\end{pmatrix}
+\end{equation}
+の変換を加える。ここで、gはBPMゲイン、cはカップリングの大きさを表す。また、$|c_x-c_y|$のクランチは理想的な形状からのずれを表す。ステアリング強度も同様にゲインとクランチが振動に対して、
+\begin{equation}
+\begin{pmatrix}
+\theta_{x,meas} \\
+\theta_{y,meas}
+\end{pmatrix}
+=
+\begin{pmatrix}
+g_{kx} \\
+c_{kx}
+\end{pmatrix}
+\theta_{x,meas}
+\end{equation}
+の変換を加える。このとき、観測される応答行列は、
+\begin{eqnarray}
+R_{i,j}^{meas} &=& \frac{\Delta x^{meas}}{\theta_x^{meas}} \nonumber \\
+&=& \frac{g_x\Delta x^{beam}}{\theta_x^{beam}/g_{kx}} \nonumber \\
+&=& g_xg_{kx}R_{xx,ij}^{beam}
+\end{eqnarray}
+で示される。BPMとステアリング強度のゲインは分離して測定でき固定することで式(\ref{obj_LOCO})は非線形の最小化問題を解くのと同様になる。この最小化問題を解くことでベータトロン関数を求められる。
+
+%*******************************************************************************
+
+\section{測定結果}
+応答行列の測定は非線形効果を最小限に抑えるためステアリングの強度を水平で0.2 \si{A}、垂直で0.1 \si{A}とした。これによってCODを300 \si{\mu m}におさめている。また再現性を確保するため5回の初期化を挟む。BPM感度係数とステアリング強度のゲインは解を固定するため定数とした。LOCOで用いたパラメータを表\ref{loco_parameter}にまとめる。初めに2極成分をフィッティングした。結果を図\ref{loco_horizontal_dipole}と図\ref{loco_vertical_dipole}に実測のレスポンス$R_{meas}$とモデルのレスポンスの差分$R_{meas}-R_{model}$で示す。ここでクランチの影響は小さいとして無視している。
+
+    \begin{table}[H]
+    \caption{LOCOパラメータ}
+    \label{loco_parameter}
+    \begin{center}
+    \begin{tabular}{ c c c c } \hline
+    名称 & & 単位 & 個数 \\ \hline
+    水平ステアリング & $\Delta \theta$ & mrad/A & 28 \\
+    垂直ステアリング & $\Delta \theta$ & mrad/A & 42 \\ 
+    4極磁場強度 & & $m^{-2}$ & 72 \\
+    4極スキュー & & mrad  & 14 \\ \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{c}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/meas_h.png}
+        \hspace{16mm} [1]実測レスポオンス
+        \end{minipage}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/model_h.png}
+        \hspace{16mm} [2]実測レスポンス-測定レスポンス
+        \end{minipage}
+        \end{tabular}
+        \caption{水平方向の応答行列}
+        \label{loco_horizontal_dipole}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{c}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/meas_v.png}
+        \hspace{16mm} [1]実測レスポオンス
+        \end{minipage}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/model_v.png}
+        \hspace{16mm} [2]実測レスポンス-測定レスポンス
+        \end{minipage}
+        \end{tabular}
+        \caption{垂直方向の応答行列}
+        \label{loco_vertical_dipole}
+    \end{figure}
+
+次に4極成分をパラメータに加えてフィッティングした。4極成分のフィッティングはベータ関数、分散関数、チューン、位相進み変えるパラメータで更新は以下の式で行う。
+
+\begin{equation}
+u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{\Delta x^2}{\Delta p_3},\cdots,-\frac{\Delta x^2}{\Delta p_n} \right)
+\end{equation}
+
+図\ref{loco_H}にフィッティングの結果を示す。縦軸は残差の大きさ、横軸は最急降下法の反復回数を表す。この調整では残差の変化量に相当する偏微分の値が最も大きい方向にパラメータを更新している。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=80mm]{./figure/LOCO/fit_loco_q.png}
+        \caption{4極磁場成分のフィッティング.}
+        \label{loco_H}
+    \end{figure}
+
+最後にスキュー成分をパラメータに加えてフィッティングした。図\ref{loco_skew}はレスポンスの残差が更新される様子を示す。
+
+    \begin{figure}[H]
+        \centering
+        \begin{tabular}{c}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/fit_loco_sH.png}
+        \hspace{16mm} [1]水平方向
+        \end{minipage}
+        \begin{minipage}{0.45\hsize}
+        \centering
+        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/fit_loco_sV.png}
+        \hspace{16mm} [2]垂直方向
+        \end{minipage}
+        \end{tabular}
+        \caption{4極スキュー成分のフィッティング.}
+        \label{loco_skew}
+    \end{figure}
+
+以上の操作によって、応答行列の誤差は水平方向で5.2 \si{\mu m}、垂直方向で2.8 \si{\mu m}と収束した。これはシミュレーションに導入するのに十分な精度である。更に誤差を小さくするためにはゲインの測定とクランチの効果を計算すればよい。実験結果であるLOCOモデルと計算モデルオプティックスの比較を図\ref{loco_optics}に示す。また、ウィグラーの電源を切り替えた時の結果を図\ref{loco_wiggler}に示す。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=120mm]{./figure/LOCO/optics.png}
+        \caption{PFリングのオプティックス。実線はデザインモデルのベータトロン関数を表す。破線は挿入光源の影響によって歪んだベータトロン関数を表す。ベータトロン関数の歪みはアクセプタンスにあらわれる。入射シミュレーションでは実際の運転時にビームが受けるベータトロン関数を適用した。}
+        \label{loco_optics}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=120mm]{./figure/LOCO/wiggler.png}
+        \caption{PFリングのオプティックス(wiggler on/off from LOCO model)。点線は挿入光源の電源を入れた時のベータトロン関数を表す。破線は挿入光源の電源を入れていないときのベータトロン関数を表す。}
+        \label{loco_wiggler}
+    \end{figure}
+
+%******************************************************************************
 \section{入射効率}
 現実の加速器要素は非線形成分を含むため軌道の運動方程式は解析的に解けない。そのため、粒子の追跡では加速器要素を無限小区間に分割して正準変換のヤコビアンを転送行列に対応させる。この場合、入射ビームに対応する分布を持った各粒子は、初期値毎にその周辺で運動方程式を線形化して粒子の軌道が求められる。この粒子追跡を放射減衰のスケールまで行い入射効率を評価した\cite{takagi}。
 
@@ -1629,417 +2030,8 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 広島大学の松葉俊哉助教には、学部の頃からご指導・ご助言を頂き本研究を行うきっかけを下さいました。KEKの原田健太郎准教授、帯名崇教授、東直特別助教、長橋進也技師、上田明専門技師、高井良太准教授、高木宏之准教授には、研究の全てに関して加速器科学だけでなく実験手法や発表練習などご教授頂きながら研究活動に付き合っていただきました。加速器七系の方々には、光源打ち合わせのマシンスタディ報告や7系交流会で様々なコメントを頂き、議論に付き合っていただきました。非常に有意義な研究生活を過ごすことができました。本研究にご協力いただいた皆様に心より感謝いたします。
 
 最後になりますが、これまで学生生活を支援いただいた私の家族に感謝の意を表します。
-%*******************************************************************************
-\newpage
-\appendix
-\addcontentsline{toc}{chapter}{付録  信号処理}
-\chapter*{信号処理}
-本章では、入射パラメータの測定にて記述した、電極から返されるADC raw dataをビーム位置に変化する手順とパルス波形に再構築する手順の説明する。初めにBPMの測定原理をまとめる。式の導出はOHOセミナーの資料\cite{Kuboki}を参照した。次にデータ処理にてADC raw dataをビーム位置に変換するため開発した解析をまとめる。最後にデータの収集タイミングを解析してパルス波形の再構築するために行ったタイミングの解析をまとめる。
-%*******************************************************************************
-\section*{測定原理}
-ビーム位置モニター(Beam Position Monitor:BPM)はビームの横方向の位置を測定する、モニターとして使用される。ここでBPMの電極はボタン電極、形状は円筒形を考える。線密度$\lambda$の電荷がボタンに誘起する電荷qは、
-\begin{equation}
-q = \frac{\lambda }{2\pi R} \int_{-\Delta \phi_0}^{-\Delta \phi_0} \frac{R^2-x^2}{R^2+x^2-2Rx(\varphi-\theta)} d\varphi
-\end{equation}
-で表される。ここで、x、$W << R$とすると、
-\begin{equation}
-\label{line_charge}
-q = \frac{\lambda}{2\pi R} \left(1+\frac{2x}{R} \right)
-\end{equation}
-に計算される。軌道変位xが大きいときは式(\ref{line_charge})が示すように、誘導電荷と変位の関係は非線形になる。このことはビーム位置モニターとしてxの大きい領域まで使用する場合、x-q関係を補正する必要があることを示唆している。ボタン電極からの信号は、電荷量と電極までの距離に比例した電圧波形として同軸ケーブルに接続された処理回路まで伝搬される。電極部は伝搬系とインピーダンスマッチしておらず、ボタン周辺と真空チェンバーとの面から生じるキャパシタンス成分が強く、電荷の時間変動$dq/dt$の電流源で信号を発生する。したがってこれに接続されている50$\Omega$の同軸ケーブル入り口では等価回路の回路方程式より、
-\begin{equation}
-\label{eq_cir_capa}
-\frac{dq}{dt}=C\frac{dV}{dt}+\frac{V}{R'}
-\end{equation}
-になる。発生する電圧をラプラス変換にて求めると、
-\begin{equation}
-\label{hpf_filter}
-V(s) = \frac{q(s)}{C} \frac{s}{s+\frac{1}{CR} }
-\end{equation}
-となる。式(\ref{hpf_filter})からBPMは微分時定数$\tau = CR$のハイパスフィルター(HPF)型の周波数特性を示すことが予想される。バンチの幅が時定数より十分小さければ出力電圧はバンチの形を再現する。このモニターでは動作原理上、電極の長さLがバンチ幅より短くなければならない。
 
-また、ボタン電極型の特徴として静電容量と時定数が小さい。したがって進行方向のバンチ幅が十分に短くないときビーム進行方向の電荷分布の影響を受ける。その分布を$f(t)$とすると、
-\begin{equation}
-\lambda(\tau) = Nef(\tau) = \frac{i_0}{f_0}f(\tau)
-\end{equation}
-で表される。ここで$f(\tau)$の積分値は1に規格化し、$f_0$、$\tau$はそれぞれ周回周波数、バンチ時間幅である。電極に誘起される全電荷は、
-\begin{equation}
-Q(t) = \frac{i_0W}{2\pi af_0\tau} \left(a+\frac{x}{2a} \right)[ <f> + \eta {f(\tau)-<f>}]
-\end{equation}
-である。ここで、$<f>$は$f(t)$の平均を示し、$\eta$はTransit time factorを示す。$\eta$は$\eta<1$かつ、電極の長さLとバンチ幅$\tau$の関数である。
 
-ビームの分布関数を次のように仮定する。
-\begin{equation}
-f(t) = \frac{1}{t}\cos ^2(\frac{\pi t}{2\tau })
-\end{equation}
-すると、
-\begin{eqnarray}
-Q(t) &=& \frac{ i_0 WL}{ 4\pi acf_0\tau } \left( 1+\eta \cos \left(\frac{\pi t}{\tau} \right) \right) \\
-\eta &=& \frac{ \sin (\theta_\tau /2)}{ (\theta_\tau /2)} \\
-\theta_\tau &=& \frac{\pi L}{c \tau}
-\end{eqnarray}
-となる。回路方程式(\ref{eq_cir_capa})は解けて、出力波形は次のように求まる。
-\begin{equation}
-V(t) = -\frac{i_0WL\eta }{4\pi acf_0t}
-\end{equation}
-このモニターは電極の形が小さいので、真空チェンバー内に4個取り付けて、水平、垂直両方向の軌道変位を次の計算式により求めることができる。
-\begin{equation}
-\frac{ (V_A+V_D)-(V_B+V_C) }{ V_A+V_B+V_C+V_D } = U^i
-\end{equation}
-\begin{equation}
-\frac{ (V_A+V_D)-(V_B+V_C) }{ V_A+V_B+V_C+V_D } = V^j
-\end{equation}
-位置感度係数kは円形チェンバーの場合x, y方向ともに同じ値になる。円筒型でないBPMの感度係数は有限要素法や境界要素法などの数値計算、もしくはワイヤ校正によって求める。通常、ワイヤー較正は、ビームサイズの小さい電子や陽子を観測する際に含まれる非線形効果を補正して精度よく位置を測定するために用いられる。
-
-本研究では、xの大きい領域まで使用するためにワイヤー較正を使用した。BPMダクトの断面図を図\ref{figure_CSBPM}に示す。ダクトには4極の電極があり、伝搬ケーブルを接続されて各電極の信号比からビーム位置を導出できる。ビーム位置は、
-\begin{eqnarray}
-\label{BPM_calc}
-x = \sum_{i=0}^3 \sum_{j=0}^3 k_x(i,j)U^iV^j \nonumber \\
-y = \sum_{i=0}^3 \sum_{j=0}^3 k_y(i,j)U^iV^j
-\end{eqnarray}
-と表記される。kはモニターのマッピング情報から得られる非線形感度係数を表し、補正には表\ref{coef_BPM}のリストを使用した。\ref{coef_BPM}の非線形感度係数を使用した時のビーム位置マッピングは図\ref{calc_BPM}に示す。青点がビームダクト内をワイヤーを通して電流を流した位置、赤点は式(\ref{BPM_calc})で計算して測定される位置を示す。図\ref{calc_BPM}より、電極の外側を通過するビームは非線形応答によって縮退されることを確認できる。
-
-     \begin{figure}[H]
-        \centering
-        \includegraphics[width=100mm]{./figure/BPM/CSbpm.png}
-        \caption{BPMダクトの断面図.}
-        \label{figure_CSBPM}
-    \end{figure}
-
-     \begin{figure}[H]
-        \centering
-        \includegraphics[width=100mm]{./figure/BPM/Plot_BPM.png}
-        \caption{三次多項式フィットによる計算されたビーム位置}
-        \label{calc_BPM}
-    \end{figure}
-
-    \begin{table}[H]
-    \caption{BPMの非線形応答係数}
-    \label{coef_BPM}
-    \centering
-    \begin{tabular}{ c  c c } \hline
-    Coefficients & Horizontal & Vertical \\ \hline
-    $k(0,0)$ & 0.000 & 0.000 \\
-    $k(1,0)$ & 17.120 & 0.000 \\
-    $k(1,1)$ & 0.000 & 16.432 \\
-    $k(2,0)$ & 0.000 & 0.000 \\
-    $k(2,1)$ & 0.000 & 0.000 \\
-    $k(2,2)$ & 0.000 & 0.000 \\
-    $k(3,0)$ & 18.829 & 0.000 \\
-    $k(3,1)$ & 0.000 & -11.477 \\
-    $k(3,2)$ & -27.138 & 0.000 \\
-    $k(3,3)$ & 0.000 & 7.431 \\ \hline
-    \end{tabular}
-    \end{table}
-
-%*******************************************************************************
-
-\section*{データ処理}
-ボタン電極からの入力信号は、バンドパスフィルターを通過してADC変換された波形で観測される。図\ref{signal_start}に入射ビームのバンチを観測した結果を拡大して示す。縦軸のADC Countはビームの電荷量に相当する。横軸のSampleは入射トリガーが来てバッファー内に格納される信号を112 \si{MHz}でサンプリングした時間に相当する。バッファーに格納される範囲はメモリの容量で決まり、0から4096である。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=100mm]{./figure/BPM/raw_stored.png}
-        \caption{Libera Brilliance plusからのADC生データ.}
-        \label{signal_start}
-    \end{figure}
-
-図\ref{signal_start}より、信号の周期は74 Samplesであることがわかる。これは自己相関関数を用いて相関の高い点の間隔を調べて求めた。
-データ処理は、図\ref{signal_start}の信号から、オフセットを取り除き、1周期ごとに取り出して、ADC Countの絶対値を総和して、信号の大きさにする。この値を式(\ref{BPM_calc})に代入して位置を求めた。ビーム位置の取得は複数回行い、平均値を取得するが、入射ビームでは電荷量にばらつきがあるので次の例外処理を加えた。一例として図\ref{BPM_ex1}に入射振動の測定を100回行った結果を示す。左図の縦軸はビーム位置、右図の縦軸は電極からの信号の総和、横軸は測定回数に相当する。
-
-    \begin{figure}[H]
-        \centering
-        \begin{tabular}{c}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/BPM/bpm_ex2.png}
-        \hspace{18mm} [1]水平方向のビーム位置
-        \end{minipage}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/BPM/bpm_ex3.png}
-        \hspace{16mm} [2]電極からの信号量
-        \end{minipage}
-        \end{tabular}
-        \caption{入射振動の測定結果}
-        \label{BPM_ex1}
-    \end{figure}
-
-図\ref{BPM_ex1}より、Linacからのビームのばらつきとダクト削れた影響が信号の大きさにあらわれて、測定に失敗した重心位置が観測されることをわかる。このようなデータ除去を例外処理に追加した。
-
-\section*{データ収集タイミング}
-データ収集タイミングはLinacでつくられた入射トリガを用いている。基本周波数はKEKBのマスターオシレータ510  \si{MHz}を分周した10.38546 \si{MHz}を位相同期回路の入力に用いて生成した571.2 \si{MHz}と、これを分周逓倍した10.39 \si{MHz}である\cite{LINAC_timing}。入射トリガーを受け取り、入力信号はバッファーに格納され、入射やキッカー電磁石の励磁が始まる。
-
-はじめに記録が始まるタイミングと入射ビームのタイミングを調べる。測定は0.25 \si{ｎC}のビームを入射してボタン電極から返される信号を調べる。図\ref{signal_start}にボタン電極から入力される信号を示す。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=100mm]{./figure/BPM/start.png}
-        \caption{入射振動の生データ.}
-        \label{signal_start2}
-    \end{figure}
-
-図\ref{signal_start2}は図\ref{signal_start}の横軸を2000 Sampleまで拡大した図である。図\ref{signal_start2}からビームの入射タイミングがわかる。入射トリガとキッカー電磁石の励磁タイミングは正確で、タイミングを固定して(Sample=405)信号の抽出を行った。
-
-次にトリガーとキッカーの励磁タイミングの同期をとるため計算と測定を行った。計算ではキッカー電磁石が半正弦波としてディレイタイムを変えた時のBPMで観測される振動を求める。測定ではディレイタイムを変えた時の蓄積ビームの振動を調べる。以下にK3の蹴り角を加えた時、ディレイタイムを周期時間まで掃引してビームの振動を計算した結果を示す。BPMの位置は以下の場所を使用した。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=110mm]{./figure/BPM/lattice.png}
-        \caption{BPMの位置}
-        \label{timing_lattice}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=110mm]{./figure/BPM/kick.png}
-        \caption{K3に蹴り角を加えた時BPMで観測される振動(計算)}
-        \label{oscil_K3}
-    \end{figure}
-
-図\ref{oscil_K3}の横軸の目盛りは周期時間である。縦軸はキッカーの蹴り角と各BPMで観測される振幅の比率を表す。図\ref{oscil_K3}の一周期目は単なる転送の応答であり、
-\begin{equation}
-\label{trans_single}
-\begin{pmatrix}
-x \\
-x'
-\end{pmatrix}_{BPM}
-=
-M(x_{BPM}|x_{K3})
-\begin{pmatrix}
-0 \\
-\theta(t)
-\end{pmatrix}_{Kicker}
-\end{equation}
-で表される。2周期(624から1248 nsec)の振動は前ターンの振動を含み、
-\begin{equation}
-\begin{pmatrix}
-x_{n+1} \\
-x'_{n+1}
-\end{pmatrix}_{BPM}
-=
-M(x_{BPM}|x_{K3}) \left \{
-\begin{pmatrix}
-x \\
-x'
-\end{pmatrix}_{K3}
-+
-\begin{pmatrix}
-0 \\
-\theta(t)
-\end{pmatrix}_{K3}
-\right \}
-\end{equation}
-で記述される。3周期以降は、蹴り角が含まれないので応答は一周の転送行列を重ねて、
-\begin{equation}
-\begin{pmatrix}
-x_{n+1} \\
-x'_{n+1}
-\end{pmatrix}_{BPM}
-=
-M(x_{BPM}|x_{K3})
-\begin{pmatrix}
-x_n \\
-x'_n
-\end{pmatrix}_{K3}
-\end{equation}
-となる。次にディレイタイムを掃引した時の蓄積ビームの振動を測定して平均値をプロットしたものを示す。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=140mm]{./figure/BPM/bpm.png}
-        \caption{K3に蹴り角を加えた時BPMで観測される振動(実測)}
-        \label{timing_kick}
-    \end{figure}
-
-図\ref{timing_kick}の囲った横軸の範囲が周回時間に相当する。3つの線のプロットは1周期違いのプロットであり、計算で求めた0から$624\times3$の範囲に相当する。2つの結果を比べるため、図を整形して比較したものを図\ref{com_kick}に示す。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=140mm]{./figure/BPM/K3_tim.png}
-        \caption{K3に蹴り角を加えた時BPMで観測される振動の比較}
-        \label{com_kick}
-    \end{figure}
-
-図\ref{com_kick}のエラーバー付きは図\ref{timing_kick}の結果であり、標準偏差を示す。実線は計算値を示す。波形の立ち上がりの部分では半正弦波で振動をよく計算で来ているが、2周期目、3周期目と違いが大きくなっていることがわかる。これはパルス幅、反射の影響を表している。タイミングの合わせ方は、図\ref{timing_kick}の切り出し範囲を調整することで行った。同様の操作を全てのキッカーに対して行っている。
-
-%*******************************************************************************
-\newpage
-\appendix
-\addcontentsline{toc}{chapter}{付録  オプティックスの測定}
-\chapter*{オプティックスの測定}
-本章では、ベータトロン関数の測定について記述する。ベータトロン関数は横方向の振動の大きさを表し入射効率の計算に必要なパラメータである。はじめにベータトロン関数の測定方法について説明。その中で測定に使用したLinear Optics Debugging Code LOCO (Linear Optics from Closed Orbits)を説明する。測定結果ではLOCOの解析過程と結果をまとめる。ベータトロン関数の測定原理はOHOセミナーの資料\cite{Kobayashi_oho}を主に参照した。
-\section*{測定原理}
-ベータトロン関数の直接的な測定は、四重極強度を微小変化させてチューンシフトを測定する方法とベータトロン振動の振幅から測定する方法がある。間接的な測定は、複数のチューンの位相差を調べて比をとり求める方法\cite{castro}や応答行列を軌道フィッティングして求める方法\cite{LOCO}などがある。
-
-はじめにベータトロン関数の直接的な測定についてまとめる。チューンシフトから求める方法は以下の式、
-\begin{equation}
-\Delta\nu = \frac{1}{4\pi} \int_0^s K(s)\beta(s) ds
-\end{equation}
-で与えられる。これを整理してベータトロン関数は、
-\begin{equation}
-\beta = \frac{4\pi\Delta\nu}{K(s)L}
-\end{equation}
-で求められる。ここでLは4極電磁石の磁石長である。この方法では式にK値を含み、磁石の履歴をうけるため正確な測定は困難である。ベータトロン振動の振幅から測定する方法はステアリング強度$\Delta \theta$を変化させて生じるCOD (closed orbit distortion)は以下の式、
-\begin{equation}
-\label{LOCO}
-x_{COD}(s) = \frac{\sqrt{\beta(s_1)\beta(s_0)}}{2\sin (\pi \nu)}\cos (\pi \nu-|\phi(s_0)-\phi(s_1)|)\Delta \theta
-\end{equation}
-で与えられる。これを整理して位相関係が小さいときベータトロン関数は、
-\begin{equation}
-\beta(s_1) = \frac{2x_{COD}tan(\pi \nu)}{\Delta \theta}
-\end{equation}
-で求められる。この方法では、ターンバイターンのビーム位置モニターを用いて、既知のチューンとステアリング強度の変化量$\Delta \theta$があって、振幅からベータトロン関数$\beta(s)$が求められる。測定に既知のチューンが必要であるが正確なチューンの測定は難しい。測定精度はBPMとステアリング強度の精度とBPMとステアリングまでの位相関係に影響される。
-
-つぎにベータトロン関数の間接的な測定についてまとめる。間接的な測定の利点は、ベータトロン関数を複数のパラメータから測定できる点にある、パラメータを変えながら複数回測定して平均化することによって測定の堅牢性を確保できる。測定は位相差から求める方法や軌道フィッティングから求める方法などがあるが、PFでは任意の場所に設置して位相差を調べることができる高速BPMは小数であるため、軌道フィッティングから求めるLOCOを採用した。LOCOについて説明する。LOCOとは蓄積リングの補正電磁石を微小な角度で蹴り、BPMで観測される式(\ref{LOCO})の振幅の応答行列からフィッティングを行って、加速器パラメータを推定する手法である。推定は軌道レスポンスと実測のレスポンスの残差が最小となるように軌道をフィッティングする。残差の式は、
-\begin{equation}
-\label{obj_LOCO}
-f \left(\Delta K \right) = \chi ^2 = \sum_{i,j}\frac{ \left(R^{meas}_{ij}-R^{model}_{ij} \left(\Delta K \right) \right)^2}{\sigma_i^2}
-\end{equation}
-である。式(\ref{obj_LOCO})中のiおよびjはそれぞれBPM番号とステアリング番号を表す。$\sigma$はBPMのノイズレベルでありフィッティング時の重みづけの役割を果たす。測定された応答行列は以下の変換が加えられる。BPMゲインは実際のビームの位置$x_{beam}$に対して、
-\begin{equation}
-\begin{pmatrix}
-x_{meas} \\
-y_{meas}
-\end{pmatrix}
-=
-\begin{pmatrix}
-g_x & c_x \\
-c_y & g_y
-\end{pmatrix}
-\begin{pmatrix}
-x_{beam} \\
-y_{beam}
-\end{pmatrix}
-\end{equation}
-の変換を加える。ここで、gはBPMゲイン、cはカップリングの大きさを表す。また、$|c_x-c_y|$のクランチは理想的な形状からのずれを表す。ステアリング強度も同様にゲインとクランチが振動に対して、
-\begin{equation}
-\begin{pmatrix}
-\theta_{x,meas} \\
-\theta_{y,meas}
-\end{pmatrix}
-=
-\begin{pmatrix}
-g_{kx} \\
-c_{kx}
-\end{pmatrix}
-\theta_{x,meas}
-\end{equation}
-の変換を加える。このとき、観測される応答行列は、
-\begin{eqnarray}
-R_{i,j}^{meas} &=& \frac{\Delta x^{meas}}{\theta_x^{meas}} \nonumber \\
-&=& \frac{g_x\Delta x^{beam}}{\theta_x^{beam}/g_{kx}} \nonumber \\
-&=& g_xg_{kx}R_{xx,ij}^{beam}
-\end{eqnarray}
-で示される。BPMとステアリング強度のゲインは分離して測定でき固定することで式(\ref{obj_LOCO})は非線形の最小化問題を解くのと同様になる。この最小化問題を解くことでベータトロン関数を求められる。
-
-%*******************************************************************************
-
-\section*{測定結果}
-応答行列の測定は非線形効果を最小限に抑えるためステアリングの強度を水平で0.2 \si{A}、垂直で0.1 \si{A}とした。これによってCODを300 \si{\mu m}におさめている。また再現性を確保するため5回の初期化を挟む。BPM感度係数とステアリング強度のゲインは解を固定するため定数とした。LOCOで用いたパラメータを表\ref{loco_parameter}にまとめる。初めに2極成分をフィッティングした。結果を図\ref{loco_horizontal_dipole}と図\ref{loco_vertical_dipole}に実測のレスポンス$R_{meas}$とモデルのレスポンスの差分$R_{meas}-R_{model}$で示す。ここでクランチの影響は小さいとして無視している。
-
-    \begin{table}[H]
-    \caption{LOCOパラメータ}
-    \label{loco_parameter}
-    \begin{center}
-    \begin{tabular}{ c c c c } \hline
-    名称 & & 単位 & 個数 \\ \hline
-    水平ステアリング & $\Delta \theta$ & mrad/A & 28 \\
-    垂直ステアリング & $\Delta \theta$ & mrad/A & 42 \\ 
-    4極磁場強度 & & $m^{-2}$ & 72 \\
-    4極スキュー & & mrad  & 14 \\ \hline
-    \end{tabular}
-    \end{center}
-    \end{table}
-
-    \begin{figure}[H]
-        \centering
-        \begin{tabular}{c}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/meas_h.png}
-        \hspace{16mm} [1]実測レスポオンス
-        \end{minipage}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/model_h.png}
-        \hspace{16mm} [2]実測レスポンス-測定レスポンス
-        \end{minipage}
-        \end{tabular}
-        \caption{水平方向の応答行列}
-        \label{loco_horizontal_dipole}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \begin{tabular}{c}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/meas_v.png}
-        \hspace{16mm} [1]実測レスポオンス
-        \end{minipage}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/model_v.png}
-        \hspace{16mm} [2]実測レスポンス-測定レスポンス
-        \end{minipage}
-        \end{tabular}
-        \caption{垂直方向の応答行列}
-        \label{loco_vertical_dipole}
-    \end{figure}
-
-次に4極成分をパラメータに加えてフィッティングした。4極成分のフィッティングはベータ関数、分散関数、チューン、位相進み変えるパラメータで更新は以下の式で行う。
-
-\begin{equation}
-u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{\Delta x^2}{\Delta p_3},\cdots,-\frac{\Delta x^2}{\Delta p_n} \right)
-\end{equation}
-
-図\ref{loco_H}にフィッティングの結果を示す。縦軸は残差の大きさ、横軸は最急降下法の反復回数を表す。この調整では残差の変化量に相当する偏微分の値が最も大きい方向にパラメータを更新している。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=80mm]{./figure/LOCO/fit_loco_q.png}
-        \caption{4極磁場成分のフィッティング.}
-        \label{loco_H}
-    \end{figure}
-
-最後にスキュー成分をパラメータに加えてフィッティングした。図\ref{loco_skew}はレスポンスの残差が更新される様子を示す。
-
-    \begin{figure}[H]
-        \centering
-        \begin{tabular}{c}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/fit_loco_sH.png}
-        \hspace{16mm} [1]水平方向
-        \end{minipage}
-        \begin{minipage}{0.45\hsize}
-        \centering
-        \includegraphics[clip, width=0.9\columnwidth]{./figure/LOCO/fit_loco_sV.png}
-        \hspace{16mm} [2]垂直方向
-        \end{minipage}
-        \end{tabular}
-        \caption{4極スキュー成分のフィッティング.}
-        \label{loco_skew}
-    \end{figure}
-
-以上の操作によって、応答行列の誤差は水平方向で5.2 \si{\mu m}、垂直方向で2.8 \si{\mu m}と収束した。これはシミュレーションに導入するのに十分な精度である。更に誤差を小さくするためにはゲインの測定とクランチの効果を計算すればよい。実験結果であるLOCOモデルと計算モデルオプティックスの比較を図\ref{loco_optics}に示す。また、ウィグラーの電源を切り替えた時の結果を図\ref{loco_wiggler}に示す。
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=120mm]{./figure/LOCO/optics.png}
-        \caption{PFリングのオプティックス。実線はデザインモデルのベータトロン関数を表す。破線は挿入光源の影響によって歪んだベータトロン関数を表す。ベータトロン関数の歪みはアクセプタンスにあらわれる。入射シミュレーションでは実際の運転時にビームが受けるベータトロン関数を適用した。}
-        \label{loco_optics}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=120mm]{./figure/LOCO/wiggler.png}
-        \caption{PFリングのオプティックス(wiggler on/off from LOCO model)。点線は挿入光源の電源を入れた時のベータトロン関数を表す。破線は挿入光源の電源を入れていないときのベータトロン関数を表す。}
-        \label{loco_wiggler}
-    \end{figure}
-
-%******************************************************************************
 
 \newpage
 \addcontentsline{toc}{chapter}{\numberline{}参考文献}
