@@ -7,7 +7,7 @@
 \usepackage{listings} % list the code(C,SAD) at appendix
 \usepackage{here} % define figure position
 \usepackage{siunitx} % use SI of Units
-\usepackage[top=30truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}  %  use true geometry
+% \usepackage[top=30truemm,bottom=30truemm,left=30truemm,right=30truemm]{geometry}  %  use true geometry
 
 \setcounter{tocdepth}{3} % Output subsection to the table of contents.
 \setcounter{page}{-1} % reduce page number of a cover
@@ -26,7 +26,7 @@
 \begin{center}
 \vspace*{.06\textheight}
 {\LARGE 修士論文\par}\vspace{2.5cm} % Department name
-{\huge KEK-PFにおける入射率改善のための研究\par}\vspace{10.0cm} % Thesis title 
+{\huge KEK-PFにおける入射率改善のための研究\par}\vspace{8.0cm} % Thesis title 
 {\LARGE 広島大学理学研究科物理科学専攻\par}\vspace{0.25cm}
 {\LARGE 放射光物理研究室\par}
 {\LARGE M170458\par}
@@ -80,7 +80,7 @@ PFリングでは、長年の運転で積み重なった誤差の影響と東日
       \begin{figure}[H]
          \centering
          \includegraphics[width=120mm]{./figure/00_Foreword/compare_KK.png}
-         \caption{磁場測定とビームベースで測定したキッカーパルス波形の比較。実線は加速器設置前に磁場測定した結果を表す。プロットは加速器設置後にビームベースで測定した結果を表す。加速器設置後にパルス波形が変わることを理解できる。}
+         \caption[磁場測定とビームベースで測定したキッカーパルス波形の比較]{磁場測定とビームベースで測定したキッカーパルス波形の比較。実線は加速器設置前に磁場測定した結果を表す。プロットは加速器設置後にビームベースで測定した結果を表す。加速器設置後にパルス波形が変わることを理解できる。}
      \end{figure}
 
 蓄積リングのビーム位置モニターは多数回の平均処理によって精度を向上させており、BTのモニタはそれがないために精度が落ちる。リングのモニタの精度は数ミクロン、BTでは数百ミクロンである。今回の測定では、蓄積リングでの測定においても、キッカーで蹴った直後、入射ビームの入射直後の位置情報が必要であり、平均処理を行うことができなかった。また、LINACは本質的に不安定であり、入射ビームのパルス繰り返しには、大きなエネルギー、電荷、位置のばらつきが伴っている。電荷は0～1\si{nC}まで、位置は入射点で数\si{mm}パルスごとに不安定である。そのようなもとで精度良く位置を測定するためには、既存の検波回路とデータ解析ソフトウェアを使うことはできなかった。BPMはリングダクトに絶縁したボタン電極を配置すると、電極上に電極からビームまでの距離に応じた電圧が誘起される現象を利用してビーム位置を測定するものである。今回の実験では、電極から返される生の電圧波形に、LINACからの電荷量に対する例外処理 (電荷が十分に来ていない時はデータを使わない)を加え、電極からの距離の3次の非線形係数までを考慮し、フィッティングを行った。非線形係数はBPM設置前にワイヤスキャンで測定された較正値値を利用した。通常の蓄積状態の値をオフセットとして考えることで、リング中心軌道からの相対的な距離を推定することができる。電圧波形からビームのタイミングだけを抜き出し、ノイズだらけのきれいでない波形をフィッティングして電圧情報を抜き出し、非線形係数を考慮して4電極間の電圧比較からその場所でのビームの位置情報を計算するプログラムは自作のものである。
@@ -121,7 +121,7 @@ PFリングでは、長年の運転で積み重なった誤差の影響と東日
          \hspace{16mm} [2] model
          \end{minipage}
          \end{tabular}
-         \caption{蓄積ビームの振動量の変化。カラーバーの範囲は、蓄積ビームの振動量の変化量を最大最小で正規化した範囲を表す。図の比較から蓄積ビームの振動を与える影響を取り入れて再現できたことを理解できる。}
+         \caption[蓄積ビームの振動量の変化]{蓄積ビームの振動量の変化。カラーバーの範囲は、蓄積ビームの振動量の変化量を最大最小で正規化した範囲を表す。図の比較から蓄積ビームの振動を与える影響を取り入れて再現できたことを理解できる。}
      \end{figure}
 
 入射 (捕獲)率の見積もりでは、測定した入射ビームの入射点での初期位置と傾き、LOCOという手法で測定したリングオプティクスを使った。LOCOとは、リング補正電磁石の応答行列からオプティックスをフィッティングによって得る手法である。この応答行列の解析に必要なプログラムはKEKの加速器シミュレーションコードSADで自作した。また、応答測定も実際のビームで測定を行った。ガウス分布の多粒子で構成した入射ビームを蓄積リング内に打ち込み、現在のPFの状態で何周回安定に回るかを計算した。結果は、LINACからの電荷量とリング蓄積電流値の増加量から推定される捕獲率とほぼ一致した。
@@ -129,7 +129,7 @@ PFリングでは、長年の運転で積み重なった誤差の影響と東日
      \begin{figure}[H]
          \centering
          \includegraphics[width=100mm]{./figure/00_Foreword/injeff_mul03.png}
-         \caption{多粒子追跡によって100ターン後も生き残る粒子数。カラーバーのレンジは入射率(生存粒子数/生成粒子数=1000)を表す。横軸のK3とK4は下流のキッカーの蹴り角の組み合わせを表す。入射率をよくする方向は、蓄積ビームの振動を犠牲にしたキッカージャンプの効果を表す。現在の入射率はLINACばらつきを考慮して5割前後で揺らいでおり、現在の入射状況を理解できる。}
+         \caption[生存粒子数]{多粒子追跡によって100ターン後も生き残る粒子数。カラーバーのレンジは入射率(生存粒子数/生成粒子数=1000)を表す。横軸のK3とK4は下流のキッカーの蹴り角の組み合わせを表す。入射率をよくする方向は、蓄積ビームの振動を犠牲にしたキッカージャンプの効果を表す。現在の入射率はLINACばらつきを考慮して5割前後で揺らいでおり、現在の入射状況を理解できる。}
      \end{figure}
 
 \section*{入射時の蓄積ビーム振動の最適化}
@@ -165,7 +165,8 @@ PFリングでは、長年の運転で積み重なった誤差の影響と東日
 \newpage
 \pagenumbering{roman} % I, II, III, IV
 \tableofcontents
-%\listoffigures
+\listoffigures
+\listoftables
 \pagebreak \setcounter{page}{1}
 \pagenumbering{arabic} % 1,2,3
 %*******************************************************************************
@@ -1358,12 +1359,12 @@ R_{multi} = \sum_{t}^{delay} R_{single}
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/TK02.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/TK02.png}
         \hspace{16mm} [1] 0 - 2 turn
         \end{minipage}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/TK03.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/TK03.png}
         \hspace{16mm} [2] 0 - 3 turn
         \end{minipage}
         \end{tabular}
@@ -1376,12 +1377,12 @@ R_{multi} = \sum_{t}^{delay} R_{single}
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/range02.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/range02.png}
         \hspace{16mm} [1] 0 - 2 turn
         \end{minipage}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/range03.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/range03.png}
         \hspace{16mm} [2] 0 - 3 turn
         \end{minipage}
         \end{tabular}
@@ -1396,12 +1397,12 @@ R_{multi} = \sum_{t}^{delay} R_{single}
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/sin.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/sin.png}
         \hspace{16mm} [1] single bunch
         \end{minipage}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/mul.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/mul.png}
         \hspace{16mm} [2] multi bunch
         \end{minipage}
         \end{tabular}
@@ -1414,12 +1415,12 @@ R_{multi} = \sum_{t}^{delay} R_{single}
         \begin{tabular}{c}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/TK03_ex.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/TK03_ex.png}
         \hspace{16mm} [1] single bunch
         \end{minipage}
         \begin{minipage}{0.45\hsize}
         \centering
-        \includegraphics[clip, width=1.0\columnwidth]{./figure/06_Optimization/range03_ex.png}
+        \includegraphics[clip, width=1.0\columnwidth]{./figure/05_Simulation/range03_ex.png}
         \hspace{16mm} [2] multi bunch
         \end{minipage}
         \end{tabular}
@@ -1619,14 +1620,14 @@ u = \left( -\frac{\Delta x^2}{\Delta p_1},-\frac{\Delta x^2}{\Delta p_2},-\frac{
     \begin{figure}[H]
         \centering
         \includegraphics[width=120mm]{./figure/LOCO/optics.png}
-        \caption{PFリングのオプティックス。実線はデザインモデルのベータトロン関数を表す。破線は挿入光源の影響によって歪んだベータトロン関数を表す。ベータトロン関数の歪みはアクセプタンスにあらわれる。入射シミュレーションでは実際の運転時にビームが受けるベータトロン関数を適用した。}
+        \caption[PFリングのオプティックス]{PFリングのオプティックス。実線はデザインモデルのベータトロン関数を表す。破線は挿入光源の影響によって歪んだベータトロン関数を表す。ベータトロン関数の歪みはアクセプタンスにあらわれる。入射シミュレーションでは実際の運転時にビームが受けるベータトロン関数を適用した。}
         \label{loco_optics}
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=120mm]{./figure/LOCO/wiggler.png}
-        \caption{PFリングのオプティックス(wiggler on/off from LOCO model)。点線は挿入光源の電源を入れた時のベータトロン関数を表す。破線は挿入光源の電源を入れていないときのベータトロン関数を表す。}
+        \caption[PFリングのオプティックス(wiggler on/off from LOCO model)]{PFリングのオプティックス(wiggler on/off from LOCO model)。点線は挿入光源の電源を入れた時のベータトロン関数を表す。破線は挿入光源の電源を入れていないときのベータトロン関数を表す。}
         \label{loco_wiggler}
     \end{figure}
 
@@ -1995,7 +1996,7 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/03_Theory_Injection/accep_jump.png}
+        \includegraphics[width=100mm]{./figure/Injection/accep_jump.png}
         \caption{キッカージャンプによる入射ビームと蓄積ビームの軌跡}
         \label{accep_jump}
     \end{figure}
@@ -2008,7 +2009,7 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=120mm]{./figure/03_Theory_Injection/phase_stability.png}
+        \includegraphics[width=120mm]{./figure/Injection/phase_stability.png}
         \caption{位相空間安定性}
         \label{phase_stability}
     \end{figure}
@@ -2019,7 +2020,7 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=120mm]{./figure/03_Theory_Injection/separatrix.png}
+        \includegraphics[width=120mm]{./figure/Injection/separatrix.png}
         \caption{セパラトリクス($\phi=\pi/2$)}
         \label{separatrix}
     \end{figure}
@@ -2028,7 +2029,7 @@ f(x)_{calc} = \sum_{k}^{iteration}　\sqrt{ \frac{1}{N} \sum_{j}^{turn} \sum_{i}
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=100mm]{./figure/03_Theory_Injection/separatrix_SLS.png}
+        \includegraphics[width=100mm]{./figure/Injection/separatrix_SLS.png}
         \caption{シンクロトロン入射(出典\cite{injection_SLS})}
         \label{separatrix_SLS}
     \end{figure}
@@ -2039,7 +2040,7 @@ PFリングではキッカー入射にエネルギー偏差を加えた入射を
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=120mm]{./figure/03_Theory_Injection/separatrix_KEK.png}
+        \includegraphics[width=120mm]{./figure/Injection/separatrix_KEK.png}
         \caption{シンクロトロン入射の入射ビームの軌跡}
         \label{inj_syn_pf}
     \end{figure}
@@ -2048,7 +2049,7 @@ PFリングではキッカー入射にエネルギー偏差を加えた入射を
 
      \begin{figure}[H]
         \centering
-        \includegraphics[width=120mm]{./figure/03_Theory_Injection/separatrix_KEK2.png}
+        \includegraphics[width=120mm]{./figure/Injection/separatrix_KEK2.png}
         \caption{シンクロトロン入射のクーランシュナイダー不変量}
         \label{inj_syn_courant_pf}
     \end{figure}
