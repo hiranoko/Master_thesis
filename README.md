@@ -5,8 +5,6 @@ This is the repository for my master thesis.
 # vim MP.tex
 
 All text is included.  
-The pdf of the thesis is in the doc directory.
-The presetation slides is in the pretation directory.
 
 # Abstract  
 
