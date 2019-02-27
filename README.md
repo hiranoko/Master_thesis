@@ -1,7 +1,7 @@
 # Stydy for improving injection efficiency at KEK-PF.  
 
 This is the repository for my master thesis.  
-  PDF file is [here](https://github.com/hiranoko/Master_thesis/releases/download/v1.0/master_thesis_20190207.pdf)
+  PDF file is [HERE](https://github.com/hiranoko/Master_thesis/releases/download/v1.0/master_thesis_20190207.pdf).
 # vim MP.tex
 
 All text is included.  
