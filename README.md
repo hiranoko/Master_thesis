@@ -1,7 +1,8 @@
 # Stydy for improving injection efficiency at KEK-PF.  
 
 This is the repository for my master thesis.  
-  PDF file is [HERE](https://github.com/hiranoko/Master_thesis/releases/download/v1.0/master_thesis_20190207.pdf).
+PDF file is [HERE](https://github.com/hiranoko/Master_thesis/releases/download/v1.0/master_thesis_20190207.pdf).
+
 # vim MP.tex
 
 All text is included.  
@@ -15,5 +16,6 @@ KEK-PF is a 2.5 GeV synchrotron radiation facility. In recent years, the injecti
 Hirano Kota  
 
 hiranoko@post.kek.jp  
-hirano-m170458@hiroshima-u.ac.jp
-
+hirano-m170458@hiroshima-u.ac.jp  
+kota88_hirano@mhi.co.jp  
+yaya16536@gmail.com
