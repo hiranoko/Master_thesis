@@ -15,7 +15,7 @@ KEK-PF is a 2.5 GeV synchrotron radiation facility. In recent years, the injecti
 
 Hirano Kota  
 
-hiranoko@post.kek.jp  
-hirano-m170458@hiroshima-u.ac.jp  
+~~hiranoko@post.kek.jp~~
+~~hirano-m170458@hiroshima-u.ac.jp~~
 kota88_hirano@mhi.co.jp  
 yaya16536@gmail.com
